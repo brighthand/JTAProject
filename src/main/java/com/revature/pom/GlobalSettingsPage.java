@@ -9,15 +9,15 @@ public class GlobalSettingsPage {
 	static WebElement e = null;
 
 	public static WebElement timelineType(WebDriver d) {
-		e = d.findElement(By.id("input_285")); //*[@id="input_285"] //*[@id="input_3"]
+		e = d.findElement(By.xpath("//*[@id=\"input_3\"]"));
 		return e;
 	}
 
 	public static WebElement reportsGrads(WebDriver d) { 
-		e = d.findElement(By.id("input_286"));
+		e = d.findElement(By.xpath("//*[@id=\"input_4\"]"));
 		return e;
 	}
-
+	/*
 	public static WebElement reportsCandidates(WebDriver d) {
 		e = d.findElement(By.id("input_287"));
 		return e;
@@ -48,5 +48,6 @@ public class GlobalSettingsPage {
 		e = d.findElement(By.name("input_295"));
 		return e;
 	}
+	*/
 
 }
