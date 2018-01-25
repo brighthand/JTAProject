@@ -14,6 +14,7 @@ public class TestClass {
 		openApplication();
 		testLoginMethod();
 		testOverviewMethod();
+		testLogoutMethod();
 		driver.close();
 	}
 	
@@ -51,7 +52,9 @@ public class TestClass {
 		OverviewPage.exportCSV(driver).click();
 	}
 	
-	
+	private static void testLogoutMethod() {
+		LogoutPage.logout(driver).click();
+	}
 	
 	
 	
