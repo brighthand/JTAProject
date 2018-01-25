@@ -21,13 +21,13 @@ public class TestClass {
 		File f1 = new File("src/main/resources/chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", f1.getAbsolutePath());
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get("https://dev.assignforce.revaturelabs.com");
 	}
 	
 	private static void testLoginMethod() {
 		LoginPage.user(driver).sendKeys("test.trainer@revature.com.int1");
-		LoginPage.password(driver).sendKeys("p@$$w0rd2");
+		LoginPage.password(driver).sendKeys("trainer123");
 		LoginPage.submit(driver).click();
 	}
 	
