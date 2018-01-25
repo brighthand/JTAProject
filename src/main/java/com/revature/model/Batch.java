@@ -21,8 +21,8 @@ public class Batch { //implements Serializable {
 		@Column(name="BATCH_ID", nullable=false)
 		private int batchid;
 		
-		@Column(name="NAME", length=10)
-		private String name;
+		//@Column(name="NAME", length=10)   --automatically created and therefore not necessary
+		//private String name;
 		
 		@Column(name="CURRICULUM", length=10)
 		private String curriculum;
@@ -33,8 +33,8 @@ public class Batch { //implements Serializable {
 		@Column(name="SKILLS", length=10)
 		private String skills;
 		
-		@Column(name="NUMBEROFWEEKS")
-		private String numberOfWeeks;
+		//@Column(name="NUMBEROFWEEKS")   --automatically calculated by webapp, therefore excluded from table
+		//private String numberOfWeeks;
 		
 		@Column(name="TRAINER", length=10)
 		private String trainer;
@@ -52,24 +52,24 @@ public class Batch { //implements Serializable {
 		private int room;
 		
 		@Column(name="STARTDATE", length=10)
-		private Date startdate;
+		private String startdate;     //format must be mm/dd/yyyy
 		
 		@Column(name="ENDDATE", length=10)
-		private Date enddate;
+		private String enddate;       //format must be mm/dd/yyyy
 		
 		public Batch() {
 			super();
 		}
 		
 		
-		public Batch(String name, String curriculum, String focus, String skills, String numberOfWeeks, String trainer, String cotrainer, String location, String building, int room, Date startdate, Date enddate) {
+		public Batch(String curriculum, String focus, String skills, String trainer, String cotrainer, String location, String building, int room, String startdate, String enddate) {
 		super();
 		
-		this.name = name;
+		//this.name = name;
 		this.curriculum = curriculum;
 		this.focus = focus;
 		this.skills = skills;
-		this.numberOfWeeks = numberOfWeeks;
+		//this.numberOfWeeks = numberOfWeeks;
 		this.trainer = trainer;
 		this.cotrainer = trainer;
 		this.location = location;
@@ -81,13 +81,13 @@ public class Batch { //implements Serializable {
 		
 	}
 		
-		public String getName() {
+		/*public String getName() {
 			return name;
 		}
 
 		public void setName(String name) {
 			this.name = name;	
-			}
+			}*/
 		
 		
 		public String getCurriculum() {
@@ -114,13 +114,13 @@ public class Batch { //implements Serializable {
 			this.skills = skills;
 		}
 		
-		public String getNumberOfWeeks() {
+		/*public String getNumberOfWeeks() {
 			return numberOfWeeks;
 		}
 		
 		public void setNumberOfWeeks() {
 			this.numberOfWeeks = numberOfWeeks;
-		}
+		}*/
 		
 		
 		public String getTrainer() {
@@ -156,7 +156,7 @@ public class Batch { //implements Serializable {
 			this.room = room;
 		}
 		
-		public Date getStratDate() {
+		public String getStratDate() {
 			return startdate;
 		}
 		
@@ -164,7 +164,7 @@ public class Batch { //implements Serializable {
 			this.startdate = startdate;
 		}
 		
-		public Date getEndDate() {
+		public String getEndDate() {
 			return enddate;
 		}
 		
