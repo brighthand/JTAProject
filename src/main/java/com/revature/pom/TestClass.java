@@ -14,6 +14,7 @@ public class TestClass {
 		openApplication();
 		testLoginMethod();
 		testOverviewMethod();
+		testCurriculaMethod();
 		testLogoutMethod();
 		driver.close();
 	}
@@ -48,8 +49,13 @@ public class TestClass {
 		OverviewPage.all(driver).click();
 		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
-		//Testing 
+		//Export csv
 		OverviewPage.exportCSV(driver).click();
+	}
+	
+	private static void testCurriculaMethod() {
+		CurriculaPage.coreCurricula(driver).click();
+		CurriculaPage.focuses(driver).click();
 	}
 	
 	private static void testLogoutMethod() {
