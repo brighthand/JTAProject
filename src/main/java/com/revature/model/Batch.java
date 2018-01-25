@@ -18,34 +18,34 @@ public class Batch { //implements Serializable {
 		@Id
 		@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="seqname")
 		@SequenceGenerator(name="seqname", sequenceName="batch_seq_name", initialValue=1,allocationSize=1)
-		@Column(name="BATCH_ID", nullable=false)
+		@Column(name="BATCH_ID", nullable=false) 
 		private int batchid;
 		
 		//@Column(name="NAME", length=10)   --automatically created and therefore not necessary
 		//private String name;
 		
-		@Column(name="CURRICULUM", length=10)
+		@Column(name="CURRICULUM", length=20)
 		private String curriculum;
 		
-		@Column(name="FOCUS", length=10)
+		@Column(name="FOCUS", length=20)
 		private String focus;
 		
-		@Column(name="SKILLS", length=10)
+		@Column(name="SKILLS", length=20)
 		private String skills;
 		
 		//@Column(name="NUMBEROFWEEKS")   --automatically calculated by webapp, therefore excluded from table
 		//private String numberOfWeeks;
 		
-		@Column(name="TRAINER", length=10)
+		@Column(name="TRAINER", length=20)
 		private String trainer;
 		
-		@Column(name="COTRAINER", length=10)
+		@Column(name="COTRAINER", length=20)
 		private String cotrainer;
 		
-		@Column(name="LOCATION", length=10)
+		@Column(name="LOCATION", length=30)
 		private String location;
 		
-		@Column(name="BUILDING", length=10)
+		@Column(name="BUILDING", length=20)
 		private String building;
 		
 		@Column(name="ROOM", length=10)
