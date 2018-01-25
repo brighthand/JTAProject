@@ -29,5 +29,14 @@ public class OverviewPage {
 		return element;
 	}
 	
+	//Testing the export csv functionality
+	public static WebElement exportCSV(WebDriver driver) {
+		element = driver.findElement(By.xpath("//*[@id=\"view\"]/div/md-card/md-toolbar/div[1]/button/md-icon"));
+		return element;
+	}
+	
+	
+	
+	
 
 }

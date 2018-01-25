@@ -21,7 +21,7 @@ public class TestClass {
 		File f1 = new File("src/main/resources/chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", f1.getAbsolutePath());
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		driver.get("https://dev.assignforce.revaturelabs.com");
 	}
 	
@@ -35,14 +35,20 @@ public class TestClass {
 		//In progress
 		OverviewPage.filter(driver).click();
 		OverviewPage.inProgress(driver).click();
+		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
 		//Beginning in two weeks
 		OverviewPage.filter(driver).click();
 		OverviewPage.begTwoWeeks(driver).click();
+		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
 		//All
 		OverviewPage.filter(driver).click();
 		OverviewPage.all(driver).click();
+		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
+		//Testing 
+		OverviewPage.exportCSV(driver).click();
 	}
 	
 	
