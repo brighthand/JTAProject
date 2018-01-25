@@ -14,5 +14,15 @@ public class LocationsPage {
 		return element;
 	}
 	
+	public static WebElement revatureHQLocation(WebDriver driver) {
+		element = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-list/md-list-item[1]/div[1]/button "));
+		return element;
+	}
+	
+	public static WebElement nycLocation(WebDriver driver) {
+		element = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-list/md-list-item[2]/div[1]/button "));
+		return element;
+	}
+	
 	
 }

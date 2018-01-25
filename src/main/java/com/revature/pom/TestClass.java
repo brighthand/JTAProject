@@ -15,6 +15,7 @@ public class TestClass {
 		testLoginMethod();
 		//testOverviewMethod();
 		//testCurriculaMethod();
+		testLocationsMethod();
 		testLogoutMethod();
 		driver.close();
 	}
@@ -60,6 +61,13 @@ public class TestClass {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		CurriculaPage.focuses(driver).click();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	}
+	
+	private static void testLocationsMethod() {
+		LocationsPage.tab(driver).click();
+		LocationsPage.revatureHQLocation(driver).click();
+		LocationsPage.nycLocation(driver).click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
 	private static void testLogoutMethod() {
