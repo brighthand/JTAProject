@@ -17,37 +17,37 @@ public class GlobalSettingsPage {
 		e = d.findElement(By.xpath("//*[@id=\"input_4\"]"));
 		return e;
 	}
-	/*
+	
 	public static WebElement reportsCandidates(WebDriver d) {
-		e = d.findElement(By.id("input_287"));
+		e = d.findElement(By.xpath("//*[@id=\"input_5\"]"));
 		return e;
 	}
 
 	public static WebElement defaultBatchLocation(WebDriver d) {
-		e = d.findElement(By.id("select_value_label_283"));
+		e = d.findElement(By.xpath("//*[@id=\"select_value_label_1\"]"));
 		return e;
 	}
 
 	public static WebElement defaultBatchBuilding(WebDriver d) {
-		e = d.findElement(By.id("select_290"));
+		e = d.findElement(By.xpath("//*[@id=\"select_8\"]"));
 		return e;
 	}
 	public static WebElement minimumBatchSize(WebDriver d) {
-		e = d.findElement(By.id("input_292"));
+		e = d.findElement(By.xpath("//*[@id=\"input_10\"]"));
 		return e;
 	}
 	public static WebElement maximumBatchSize(WebDriver d) {
-		e = d.findElement(By.id("input_293"));
+		e = d.findElement(By.xpath("//*[@id=\"input_11\"]"));
 		return e;
 	}
 	public static WebElement defaultBatchLength(WebDriver d) {
-		e = d.findElement(By.id("input_294"));
+		e = d.findElement(By.xpath("//*[@id=\"input_12\"]"));
 		return e;
 	}
 	public static WebElement minimumBatches(WebDriver d) {
-		e = d.findElement(By.name("input_295"));
+		e = d.findElement(By.xpath("//*[@id=\"input_13\"]"));
 		return e;
 	}
-	*/
+	
 
 }
