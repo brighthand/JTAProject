@@ -13,7 +13,7 @@ public class TestClass {
 	public static void main(String[] args) {
 		openApplication();
 		testLoginMethod();
-		testOverviewMethod();
+		//testOverviewMethod();
 		testCurriculaMethod();
 		testLogoutMethod();
 		driver.close();
@@ -54,8 +54,12 @@ public class TestClass {
 	}
 	
 	private static void testCurriculaMethod() {
+		CurriculaPage.tab(driver).click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		CurriculaPage.coreCurricula(driver).click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		CurriculaPage.focuses(driver).click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
 	
 	private static void testLogoutMethod() {
