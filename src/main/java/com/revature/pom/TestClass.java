@@ -14,7 +14,7 @@ public class TestClass {
 		openApplication();
 		testLoginMethod();
 		//testOverviewMethod();
-		testCurriculaMethod();
+		//testCurriculaMethod();
 		testLogoutMethod();
 		driver.close();
 	}
@@ -63,6 +63,7 @@ public class TestClass {
 	}
 	
 	private static void testLogoutMethod() {
+		LogoutPage.tab(driver).click();
 		LogoutPage.logout(driver).click();
 	}
 	
