@@ -15,9 +15,10 @@ public class TestClass {
 		testLoginMethod();
 		//testOverviewMethod();
 		//testCurriculaMethod();
-		testLocationsMethod();
-		testLogoutMethod();
-		driver.close();
+		testTrainersMethod();
+		//testLocationsMethod();
+		//testLogoutMethod();
+		//driver.close();
 	}
 	
 	private static void openApplication() {
@@ -33,6 +34,7 @@ public class TestClass {
 		LoginPage.password(driver).sendKeys("trainer123");
 		LoginPage.submit(driver).click();
 	}
+	
 	
 	private static void testOverviewMethod() {
 		//In progress
@@ -64,10 +66,38 @@ public class TestClass {
 	}
 	
 	private static void testLocationsMethod() {
+		
 		LocationsPage.tab(driver).click();
+		LocationsPage.revature11730Location(driver).click();
 		LocationsPage.revatureHQLocation(driver).click();
+		
+		
 		LocationsPage.nycLocation(driver).click();
+		LocationsPage.cunyQueensLocation(driver);
+		LocationsPage.cunySPSLocation(driver);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
+	
+	private static void testTrainersMethod() {
+		TrainersPage.tab(driver).click();
+		
+		TrainersPage.trainerSalvatore(driver);
+		TrainersPage.trainerSalvatoreResume(driver);
+		
+		TrainersPage.trainerFoles(driver);
+		TrainersPage.trainerFolesResume(driver);
+
+		TrainersPage.trainerSteves(driver);
+		TrainersPage.trainerStevesResume(driver);
+		
+		TrainersPage.trainerTestingP(driver);
+		TrainersPage.trainerTestingPResume(driver);
+		
+		TrainersPage.trainerTesting(driver);
+		TrainersPage.trainerTestingResume(driver);
+		
+		TrainersPage.trainerTomBrady(driver);
+		TrainersPage.trainerTomBradyResume(driver);
 	}
 	
 	private static void testLogoutMethod() {

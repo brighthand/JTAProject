@@ -19,6 +19,22 @@ public class LocationsPage {
 		return element;
 	}
 	
+	public static WebElement revature11730Location(WebDriver driver) {
+		element = driver.findElement(By.xpath("//*[@id=\"loc1\"]/md-list-item/div/button "));
+		return element;
+	}
+	
+	public static WebElement cunyQueensLocation(WebDriver driver) {
+		element = driver.findElement(By.xpath("//*[@id=\"loc3\"]/md-list-item[1]/div/button "));
+		return element;
+	}
+	
+	public static WebElement cunySPSLocation(WebDriver driver) {
+		element = driver.findElement(By.xpath("//*[@id=\"loc3\"]/md-list-item[2]/div/button "));
+		return element;
+	}
+	
+	
 	public static WebElement nycLocation(WebDriver driver) {
 		element = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-list/md-list-item[2]/div[1]/button "));
 		return element;
