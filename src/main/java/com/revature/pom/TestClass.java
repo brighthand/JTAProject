@@ -15,10 +15,11 @@ public class TestClass {
 		testLoginMethod();
 		//testOverviewMethod();
 		//testCurriculaMethod();
-		testTrainersMethod();
+		//testTrainersMethod();
 		//testLocationsMethod();
+		testProfileMethod();
 		//testLogoutMethod();
-		//driver.close();
+		driver.close();
 	}
 	
 	private static void openApplication() {
@@ -98,6 +99,17 @@ public class TestClass {
 		
 		TrainersPage.trainerTomBrady(driver);
 		TrainersPage.trainerTomBradyResume(driver);
+	}
+
+	private static void testProfileMethod() {
+		ProfilePage.tab(driver).click();
+		//ProfilePage.profileFirstName(driver);
+		//ProfilePage.profileLastName(driver);
+		ProfilePage.addResume(driver).click();
+		ProfilePage.saveResume(driver).click();
+		ProfilePage.currentSkill(driver).click();
+		ProfilePage.addCertifications(driver).click();
+		
 	}
 	
 	private static void testLogoutMethod() {
