@@ -14,10 +14,11 @@ public class TestClass {
 		openApplication();
 		testLoginMethod();
 		//testOverviewMethod();
+		testBatchesMethod();
 		//testCurriculaMethod();
 		//testTrainersMethod();
 		//testLocationsMethod();
-		testProfileMethod();
+		//testProfileMethod();
 		//testLogoutMethod();
 		driver.close();
 	}
@@ -36,34 +37,34 @@ public class TestClass {
 		LoginPage.submit(driver).click();
 	}
 	
+	private static void testBatchesMethod() {
+		BatchesPage.tab(driver).click();
+	}
 	
 	private static void testOverviewMethod() {
 		//In progress
 		OverviewPage.filter(driver).click();
 		OverviewPage.inProgress(driver).click();
-		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
+		/*
 		//Beginning in two weeks
 		OverviewPage.filter(driver).click();
 		OverviewPage.begTwoWeeks(driver).click();
-		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
 		//All
 		OverviewPage.filter(driver).click();
 		OverviewPage.all(driver).click();
-		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
 		//Export csv
-		OverviewPage.exportCSV(driver).click();
+		OverviewPage.exportCSV(driver).click();*/
 	}
 	
 	private static void testCurriculaMethod() {
 		CurriculaPage.tab(driver).click();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
 		CurriculaPage.coreCurricula(driver).click();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
 		CurriculaPage.focuses(driver).click();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
 	
 	private static void testLocationsMethod() {
@@ -76,29 +77,14 @@ public class TestClass {
 		LocationsPage.nycLocation(driver).click();
 		LocationsPage.cunyQueensLocation(driver);
 		LocationsPage.cunySPSLocation(driver);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
 	private static void testTrainersMethod() {
 		TrainersPage.tab(driver).click();
 		
-		TrainersPage.trainerSalvatore(driver);
-		TrainersPage.trainerSalvatoreResume(driver);
-		
-		TrainersPage.trainerFoles(driver);
-		TrainersPage.trainerFolesResume(driver);
-
-		TrainersPage.trainerSteves(driver);
-		TrainersPage.trainerStevesResume(driver);
-		
-		TrainersPage.trainerTestingP(driver);
-		TrainersPage.trainerTestingPResume(driver);
-		
-		TrainersPage.trainerTesting(driver);
-		TrainersPage.trainerTestingResume(driver);
-		
-		TrainersPage.trainerTomBrady(driver);
-		TrainersPage.trainerTomBradyResume(driver);
+		TrainersPage.trainer(driver, String.valueOf(2)).click();
+		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		TrainersPage.trainerResume(driver, String.valueOf(2)).click();
 	}
 
 	private static void testProfileMethod() {
