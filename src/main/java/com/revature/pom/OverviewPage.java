@@ -14,20 +14,13 @@ public class OverviewPage {
 		return element;
 	}
 	
-	public static WebElement inProgress(WebDriver driver) {
-		element = driver.findElement(By.xpath("//*[@id=\"menu_container_0\"]/md-menu-content/md-menu-item[1]/button"));
+	//In progress, Begin in two weeks, All
+	public static WebElement filterOptions(WebDriver driver) {
+		element = driver.findElement(By.xpath("//*[@id=\"menu_container_0\"]/md-menu-content/md-menu-item[2]/button"));
 		return element;
 	}
 	
-	public static WebElement begTwoWeeks(WebDriver driver) {
-		element = driver.findElement(By.xpath("//*[@id=\"menu_container_0\"]/md-menu-content/md-menu-item[2]/button/span"));
-		return element;
-	}
-	
-	public static WebElement all(WebDriver driver) {
-		element = driver.findElement(By.xpath("//*[@id=\"menu_container_0\"]/md-menu-content/md-menu-item[3]/button"));
-		return element;
-	}
+
 	
 	//Testing the export csv functionality
 	public static WebElement exportCSV(WebDriver driver) {
