@@ -1,6 +1,7 @@
 package com.revature.pom;
 
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -30,19 +31,6 @@ static WebElement e = null;
 		return e;
 	}
 	
-	
-	
-	//Trainer tab
-	public static WebElement trainer(WebDriver driver, String row) {
-		e = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content[1]/md-list/md-list-item[" + row + "]/div/button"));
-		return e;
-	}
-	
-	//Download Trainer Resume
-	public static WebElement trainerResume(WebDriver driver, String row) {
-		e = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content[1]/md-list/md-list-item[" + row + "]/div/div[1]/button[1]/i "));
-		return e;
-	}
 	
 	public static WebElement addTrainer(WebDriver d) {
 		e = d.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-toolbar[1]/div/button[1]/md-icon"));
@@ -165,6 +153,6 @@ static WebElement e = null;
 		e = d.findElement(By.xpath("/html/body/div[3]/md-dialog/form/md-dialog-actions/button[2]"));
 		return e;
 	}
-	
+
 	
 }
