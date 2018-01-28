@@ -26,12 +26,5 @@ public class TrainersPage {
 		return element;
 	}
 	
-	//*[@id="view"]/md-card/md-content[1]/md-list/md-list-item[3]/div/button
-	
-	
-	
-	
-	
-	
 	
 }
