@@ -15,6 +15,23 @@ static WebElement e = null;
 		return e;
 	}
 	
+	public static WebElement cancelelement1(WebDriver driver) {
+		e = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content[2]/md-list/md-list-item[7]"));
+		return e;
+	}
+	
+	public static WebElement cancelelement2(WebDriver driver) {
+		e = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content[2]/md-list/md-list-item[8]"));
+		return e;
+	}
+	
+	public static WebElement cancelelement3(WebDriver driver) {
+		e = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content[2]/md-list/md-list-item[9]"));
+		return e;
+	}
+	
+	
+	
 	//Trainer tab
 	public static WebElement trainer(WebDriver driver, String row) {
 		e = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content[1]/md-list/md-list-item[" + row + "]/div/button"));

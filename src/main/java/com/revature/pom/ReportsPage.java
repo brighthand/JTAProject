@@ -9,29 +9,7 @@ public class ReportsPage {
 	
 	static WebElement e = null;
 	
-	public static WebElement waitForLoad(WebDriver driver, String xpath) {
-        int times = 0;
-        WebElement element = null;
-        while(element == null) {
-            try {
-                element = driver.findElement(By.xpath(xpath));
-            } catch(NoSuchElementException e) {
-                if(times < 20) {
-                    try {
-                        times++;
-                        Thread.sleep(200);
-                    } catch (InterruptedException e1) {
-                        e1.printStackTrace();
-                    }
-                }
-                else {
-                    e.printStackTrace();
-                    throw new NoSuchElementException("Element did not load in time", e);
-                }
-            }
-        }
-        return element;
-    }
+	
 	
 	public static WebElement tab(WebDriver d) {
 		e = d.findElement(By.xpath("/html/body/div[1]/div[1]/ng-include/div/md-content/md-nav-bar/div/nav/ul/li[7]/a"));
@@ -78,6 +56,38 @@ public class ReportsPage {
 		e = d.findElement(By.cssSelector("#view > md-card > md-card.ng-scope._md > get-batch-gen-table-toolbar > md-toolbar > button:nth-child(3)"));
 		return e;
 	}
+
+	
+	// Graduate Summary
+	public static WebElement togglecontent2(WebDriver d) {
+		e = d.findElement(By.cssSelector("#view > md-card > md-card:nth-child(3) > get-grad-table-toolbar > md-toolbar > button:nth-child(6)"));
+		return e;
+	}
+	
+	public static WebElement settings(WebDriver d) {
+		e = d.findElement(By.cssSelector("#view > md-card > md-card:nth-child(3) > get-grad-table-toolbar > md-toolbar > md-menu > button"));
+		return e;
+	}
+	
+	public static WebElement csv(WebDriver d) {
+		e = d.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-card[2]/get-grad-table-toolbar/md-toolbar/button[1]"));
+		return e;
+	}
+	
+	public static WebElement year(WebDriver d) {
+		e = d.findElement(By.xpath("//*[@id=\"input_44\"]")); 
+		return e;
+	}
+	
+	public static WebElement batch(WebDriver d) {
+		e = d.findElement(By.xpath("//*[@id=\"input_45\"]"));
+		return e;
+	}
+	//*[@id="input_2"]
+	
+	
+
+	
 	
 	
 	

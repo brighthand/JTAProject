@@ -15,8 +15,8 @@ public class TestClass {
 		// testLoginTrainer();
 		testLoginVP();
 		// testsettings();
-		// testReports();
-		testTrainersmethod();
+		testReports();
+		//testTrainersmethod();
 		driver.close();
 
 	}
@@ -42,6 +42,8 @@ public class TestClass {
 	}
 
 	private static void testTrainersmethod() {
+		
+		
 		TrainersPage.tab(driver).click();
 		try {
 			Thread.sleep(1000);
@@ -118,7 +120,7 @@ public class TestClass {
 			e.printStackTrace();
 		}
 		
-		TrainersPage.save(driver).click();
+		//TrainersPage.save(driver).click();
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
@@ -187,6 +189,22 @@ public class TestClass {
 
 	private static void testReports() {
 		ReportsPage.tab(driver).click();
+		ReportsPage.togglecontent2(driver).click();
+		ReportsPage.togglecontent2(driver).click();
+		ReportsPage.csv(driver).click();
+		ReportsPage.csv(driver).click();
+		ReportsPage.settings(driver).click();
+		//ReportsPage.year(driver).click();
+		ReportsPage.year(driver).clear();
+		ReportsPage.year(driver).sendKeys(String.valueOf(2019));
+		//ReportsPage.batch(driver).click();
+		ReportsPage.batch(driver).clear();
+		ReportsPage.batch(driver).sendKeys(String.valueOf(26));
+
+		
+		
+		/*
+		ReportsPage.tab(driver).click();
 		ReportsPage.togglecontent1(driver).click();
 		ReportsPage.traineeneeded(driver).click();
 		ReportsPage.traineeneeded(driver).sendKeys(String.valueOf(28));
@@ -195,6 +213,7 @@ public class TestClass {
 		ReportsPage.curriculum_option(driver).click();
 		ReportsPage.createbatch(driver).click();
 		ReportsPage.createall(driver).click();
+		*/
 
 	}
 }
