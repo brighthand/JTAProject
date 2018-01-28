@@ -12,6 +12,7 @@
 	</properties>
 
 	<dependencies>
+
 		<!-- OJDB7 Local Maven Repository -->
 		<dependency>
 			<groupId>com.github.noraui</groupId>
@@ -49,6 +50,7 @@
 			<artifactId>servlet-api</artifactId>
 			<version>2.5</version>
 		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
 		<dependency>
 			<groupId>info.cukes</groupId>

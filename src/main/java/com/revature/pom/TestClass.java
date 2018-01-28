@@ -10,19 +10,27 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class TestClass {
 
 	private static WebDriver driver = null;
-	private static int iCount = 0;
 
 	public static void main(String[] args) {
 		openApplication();
+		// testLoginTrainer();
+		testLoginVP();
+		// testsettings();
+		testReports();
+		// testTrainersmethod();
+
 		testLoginMethod();
 		// testOverviewMethod();
-		// testBatchesMethod();
-		 testCurriculaMethod();
+
+		testBatchesMethod();
+		// testCurriculaMethod();
 		// testTrainersMethod();
-		//testLocationsMethod();
+		// testLocationsMethod();
+
 		// testProfileMethod();
 		// testLogoutMethod();
 		driver.close();
+
 	}
 
 	private static void openApplication() {
@@ -33,27 +41,23 @@ public class TestClass {
 		driver.get("https://dev.assignforce.revaturelabs.com");
 	}
 
+
 	private static void testLoginMethod() {
 		LoginPage.user(driver).sendKeys("test.vpoftech@revature.com.int1 ");
 		LoginPage.password(driver).sendKeys("yuvi1712");
-		
-		LoginPage.submit(driver).click();
+		//LoginPage.user(driver).sendKeys("test.trainer@revature.com.int1");
+		//LoginPage.password(driver).sendKeys("trainer123");
 	}
+
+
 
 	private static void testBatchesMethod() {
 		BatchesPage.tab(driver).click();
 	}
 
 	private static void testOverviewMethod() {
-
-		iCount = (driver.findElements(By.xpath("//*[@id=\"menu_container_0\"]/md-menu-content"))).size();
-		System.out.println("iCount: " + iCount);
-
-		// for (int i = 0; i < iCount; i++) {
 		OverviewPage.filter(driver).click();
 		OverviewPage.filterOptions(driver).click();
-		// }
-
 		// Export csv
 		// OverviewPage.exportCSV(driver).click();
 	}
@@ -145,12 +149,6 @@ public class TestClass {
 		
 	}
 
-	private static void testTrainersMethod() {
-		TrainersPage.tab(driver).click();
-
-		TrainersPage.trainer(driver, String.valueOf(2)).click();
-		TrainersPage.trainerResume(driver, String.valueOf(2)).click();
-	}
 
 	private static void testProfileMethod() {
 		ProfilePage.tab(driver).click();
@@ -168,4 +166,179 @@ public class TestClass {
 		LogoutPage.logout(driver).click();
 	}
 
+	private static void testLoginVP() {
+		LoginPage.user(driver).sendKeys("test.vpoftech@revature.com.int1");
+		LoginPage.password(driver).sendKeys("yuvi1712");
+		LoginPage.submit(driver).click();
+	}
+
+	private static void testTrainersmethod() {
+
+		TrainersPage.tab(driver).click();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		TrainersPage.tab(driver).click();
+
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		
+
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		TrainersPage.addTrainer(driver).click();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		TrainersPage.FirstName(driver).click();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		TrainersPage.FirstName(driver).sendKeys("Test11");
+
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		TrainersPage.LastName(driver).click();
+
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		TrainersPage.LastName(driver).sendKeys("Test12");
+
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		// TrainersPage.save(driver).click();
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		TrainersPage.reactivate1(driver).click();
+
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		TrainersPage.deactivate1(driver).click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		TrainersPage.calendar(driver).click();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		/*
+		 * TrainersPage.requestpto(driver).click();
+		 * TrainersPage.requestpto_start(driver).click();
+		 * TrainersPage.requestpto_start_year_month(driver).click();
+		 * TrainersPage.requestpto_start_date(driver).click();
+		 * TrainersPage.requestpto_end(driver).click();
+		 * TrainersPage.requestpto_end_year_month(driver).click();
+		 * TrainersPage.requestpto_end_date(driver).click();
+		 * TrainersPage.requestpto_cancel(driver).click();
+		 * TrainersPage.cancelpto(driver).click();
+		 */
+
+	}
+
+	private static void testsettings() {
+		GlobalSettingsPage.tab(driver).click();
+		GlobalSettingsPage.timelineType(driver).clear();
+		GlobalSettingsPage.timelineType(driver).sendKeys(String.valueOf(15));
+		GlobalSettingsPage.reportsGrads(driver).clear();
+		GlobalSettingsPage.reportsGrads(driver).sendKeys(String.valueOf(30));
+		GlobalSettingsPage.reportsCandidates(driver).clear();
+		GlobalSettingsPage.reportsCandidates(driver).sendKeys(String.valueOf(20));
+		GlobalSettingsPage.defaultBatchLocation(driver).click();
+		GlobalSettingsPage.defaultBatchLocation_option(driver).click();
+		GlobalSettingsPage.defaultBatchBuilding(driver).click();
+		GlobalSettingsPage.defaultBatchBuilding_option(driver).click();
+		GlobalSettingsPage.minimumBatchSize(driver).clear();
+		GlobalSettingsPage.minimumBatchSize(driver).sendKeys(String.valueOf(40));
+		GlobalSettingsPage.maximumBatchSize(driver).clear();
+		GlobalSettingsPage.maximumBatchSize(driver).sendKeys(String.valueOf(50));
+		GlobalSettingsPage.defaultBatchLength(driver).clear();
+		GlobalSettingsPage.defaultBatchLength(driver).sendKeys(String.valueOf(60));
+		GlobalSettingsPage.minimumBatches(driver).clear();
+		GlobalSettingsPage.minimumBatches(driver).sendKeys(String.valueOf(70));
+	}
+
+	private static void testReports() {
+		ReportsPage.tab(driver).click();
+		ReportsPage.togglecontent2(driver).click();
+		ReportsPage.togglecontent2(driver).click();
+		ReportsPage.csv(driver).click();
+		ReportsPage.csv(driver).click();
+		ReportsPage.settings(driver).click();
+		// ReportsPage.year(driver).click();
+		ReportsPage.year(driver).clear();
+		ReportsPage.year(driver).sendKeys(String.valueOf(2019));
+		// ReportsPage.batch(driver).click();
+		ReportsPage.batch(driver).clear();
+		ReportsPage.batch(driver).sendKeys(String.valueOf(26));
+
+		/*
+		 * ReportsPage.tab(driver).click(); ReportsPage.togglecontent1(driver).click();
+		 * ReportsPage.traineeneeded(driver).click();
+		 * ReportsPage.traineeneeded(driver).sendKeys(String.valueOf(28));
+		 * ReportsPage.hiredate(driver).sendKeys("12152018");
+		 * ReportsPage.curriculum(driver).click();
+		 * ReportsPage.curriculum_option(driver).click();
+		 * ReportsPage.createbatch(driver).click();
+		 * ReportsPage.createall(driver).click();
+		 */
+
+	}
 }
