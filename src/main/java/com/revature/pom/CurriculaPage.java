@@ -13,9 +13,18 @@ public class CurriculaPage {
 		return element;
 	}
 	
-	//Provide name for toogle i.e core, focus
-	public static WebElement toogle(WebDriver d, String name) {
-		element = d.findElement(By.xpath("//*[@id= \"coreArrow\"] "));
+	public static WebElement toogleCoreCurricula(WebDriver d) {
+		element = d.findElement(By.xpath("//*[@id=\"coreArrow\"]"));
+		return element;
+	}
+	
+	public static WebElement toogleFocuses(WebDriver d) {
+		element = d.findElement(By.xpath("//*[@id=\"focusArrow\"]"));
+		return element;
+	}
+	
+	public static WebElement toogleSkills(WebDriver d) {
+		element = d.findElement(By.xpath("//*[@id=\"skillArrow\"]"));
 		return element;
 	}
 	
@@ -36,12 +45,12 @@ public class CurriculaPage {
 		return element;
 	}
 	
-	public static WebElement enterSkill(WebDriver d, String name, String row) {
-		element = d.findElement(By.xpath("//*[@id=\"input_3\"] "));
+	public static WebElement enterSkill(WebDriver d) {
+		element = d.findElement(By.xpath("//*[@id=\"input_1\"]"));
 		return element;
 	}
 
-	public static WebElement createSkill(WebDriver d, String name, String row) {
+	public static WebElement createSkill(WebDriver d) {
 		element = d.findElement(By.xpath("//*[@id=\"skill\"]/form/div/div/div/span "));
 		return element;
 	}

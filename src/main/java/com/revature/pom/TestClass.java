@@ -17,9 +17,9 @@ public class TestClass {
 		testLoginMethod();
 		// testOverviewMethod();
 		// testBatchesMethod();
-		// testCurriculaMethod();
+		 testCurriculaMethod();
 		// testTrainersMethod();
-		testLocationsMethod();
+		//testLocationsMethod();
 		// testProfileMethod();
 		// testLogoutMethod();
 		driver.close();
@@ -58,14 +58,23 @@ public class TestClass {
 		// OverviewPage.exportCSV(driver).click();
 	}
 
-	/*
-	 * private static void testCurriculaMethod() {
-	 * CurriculaPage.tab(driver).click();
-	 * 
-	 * CurriculaPage.toogleCoreCurricula(driver).click();
-	 * 
-	 * CurriculaPage.toogleFocuses(driver).click(); }
-	 */
+	
+	  private static void testCurriculaMethod() {
+	   CurriculaPage.tab(driver).click();
+	  
+	   //CurriculaPage.toogleCoreCurricula(driver).click();
+	   //CurriculaPage.toogleFocuses(driver).click();
+	   //CurriculaPage.toogleSkills(driver).click();
+	   
+	   //Testing Skills
+	   CurriculaPage.toogleSkills(driver).click();
+	   CurriculaPage.enterSkill(driver).sendKeys("Cloud pipeline");
+	   CurriculaPage.createSkill(driver).click();
+	   
+	  }
+	  
+	  
+	 
 
 	private static void testLocationsMethod() {
 		// iCount =
