@@ -22,16 +22,22 @@ public class JTATestClass {
 		
 	openApplication();
 	LoginMethod();
-	HeadToBatches();       //to be reenabled later
+	HeadToBatches();      
 	
 	
 	//for(int x = 1; x < 10; x++) {   //this retrieves the info from the DB
 	
 	BatchDaoImpl ed = new BatchDaoImpl();
-	Batch thebatch = ed.findById(16);
+	Batch thebatch = ed.findById(5);
 	//System.out.println(thebatch.getCurriculum()); //--this successfully prints data
 	SelectCurriculum(thebatch);
-	//SelectFocus(thebatch);
+	SelectFocus(thebatch);
+	//SelectSkills(thebatch); disabled for now
+	SelectTrainer(thebatch);
+	SelectCotrainer(thebatch);
+	SelectLocation(thebatch);
+	SelectBuilding(thebatch);
+	SelectRoom(thebatch);
 	//}
 	
 	//CancelBatch();
@@ -64,102 +70,208 @@ public class JTATestClass {
 	
 private static void SelectCurriculum(Batch batch) throws InterruptedException {  //can't create a batch without a batch!
 	
-	    String currentCur = batch.getCurriculum();
 		BatchPage.corecurriculum(wd).click();
-		
-		/*switch(currentCur) {
-		case "Java":
-			System.out.println("Java was returned by the DB");
-			BatchPage.corecurriculumModded(wd, "36").click();
-			break;
-		case ".NET":
-			System.out.println(".NET was returned by the DB");
-			BatchPage.corecurriculumModded(wd, "37").click();
-			break;
-		case "SDET":
-			System.out.println("SDET was returned by the DB");
-			BatchPage.corecurriculumModded(wd, "38").click();
-			break;
-		case "IntelliJ":
-			System.out.println("IntelliJ was returned by the DB");
-			BatchPage.corecurriculumModded(wd, "39").click();
-			break;
-		case "Salesforce":
-			System.out.println("Salesforce was returned by the DB");
-			BatchPage.corecurriculumModded(wd, "40").click();
-			break;
-		default:
-		    System.out.println("no value matched");
-		}*/
 		
 		WebElement selectElement = wd.findElement(By.id("select_container_10"));  //containing class id
 		
 		List<WebElement> thelist = selectElement.findElements(By.tagName("md-option"));
-		System.out.println("test output: " + thelist.size()); 
-		
-		/*Select dropdown1 = new Select(BatchPage.corecurriculum(wd));
-		dropdown1.selectByVisibleText(batch.getCurriculum());*/
+		System.out.println("test output: " + thelist.size()); //test output
+		for (WebElement component : thelist) {
+			System.out.println(component.getText());
+			if (component.getText().contains(batch.getCurriculum())) {
+				component.click();
+				break;
+			}
+			else {
+				System.out.println("no match");
+			}
+		}
 		
 }
 
 private static void SelectFocus(Batch batch) throws InterruptedException { 
 	
-		Select dropdown2 = new Select(BatchPage.focus(wd));
-		dropdown2.selectByVisibleText(batch.getFocus());
-		
-		String currentFocus = batch.getFocus();
-		BatchPage.focus(wd).click();
-		
-		switch(currentFocus) {
-		case "Java":
-			
-			
-		case ".Ruby on Rails":
-			System.out.println(".NET was returned by the DB");
-			BatchPage.corecurriculumModded(wd, "210").click();
+	BatchPage.focus(wd).click(); 
+	
+	WebElement selectElement = wd.findElement(By.id("select_container_12"));  //containing class id
+	
+	List<WebElement> thelist = selectElement.findElements(By.tagName("md-option"));
+	System.out.println("test output: " + thelist.size()); //test output
+	for (WebElement component : thelist) {
+		System.out.println(component.getText());
+		if (component.getText().contains(batch.getFocus())) {
+			component.click();
 			break;
-		case "SDET":
-			System.out.println("SDET was returned by the DB");
-			BatchPage.corecurriculumModded(wd, "211").click();
-			break;
-		case "IntelliJ":
-			System.out.println("IntelliJ was returned by the DB");
-			BatchPage.corecurriculumModded(wd, "212").click();
-			break;
-		case "Salesforce":
-			System.out.println("Salesforce was returned by the DB");
-			BatchPage.corecurriculumModded(wd, "213").click();
-			break;
-		default:
-			System.out.println("not matching entry in DB");
-			BatchPage.corecurriculumModded(wd, "209").click();
 		}
-		
-	}
+		else {
+			System.out.println("no match");
+		}
+	}			
+					
+}
+
+
+
+private static void SelectSkills(Batch batch) throws InterruptedException { //XML FILE NEEDED FOR SOURCE
+	
+	BatchPage.skills(wd).click(); 
+	
+	WebElement selectElement = wd.findElement(By.id("select_container_14"));  //containing class id
+	
+	List<WebElement> thelist = selectElement.findElements(By.tagName("md-option"));
+	System.out.println("test output: " + thelist.size()); //test output
+	for (WebElement component : thelist) {
+		System.out.println(component.getText());
+		if (component.getText().contains(batch.getSkills())) {  //input to be replaced with an xml source
+			component.click();
+			break;
+		}
+		else {
+			System.out.println("no match");
+		}
+	}			
+					
+}
+
+private static void SelectStartDate(Batch batch) throws InterruptedException {  //WORK IN PROGRESS
+	
+	BatchPage.startdate(wd).click(); 
+			//BatchPage.selectday(wd, "22").click();
+	
+	WebElement selectElement = wd.findElement(By.id("select_container_14"));  //containing class id
+	
+	List<WebElement> thelist = selectElement.findElements(By.tagName("md-option"));
+	System.out.println("test output: " + thelist.size()); //test output
+	for (WebElement component : thelist) {
+		System.out.println(component.getText());
+		if (component.getText().contains(batch.getSkills())) {  //input to be replaced with an xml source
+			component.click();
+			break;
+		}
+		else {
+			System.out.println("no match");
+		}
+	}			
+					
+}
+
+
+private static void SelectTrainer(Batch batch) throws InterruptedException { 
+	
+	BatchPage.trainer(wd).click(); 
+	
+	WebElement selectElement = wd.findElement(By.id("select_container_22"));  //containing class id
+	
+	List<WebElement> thelist = selectElement.findElements(By.tagName("md-option"));
+	System.out.println("test output: " + thelist.size()); //test output
+	for (WebElement component : thelist) {
+		System.out.println(component.getText());
+		if (component.getText().contains(batch.getTrainer())) {  //input to be replaced with an xml source
+			component.click();
+			break;
+		}
+		else {
+			System.out.println("no match");
+		}
+	}			
+					
+}
+
+
+private static void SelectCotrainer(Batch batch) throws InterruptedException { 
+	
+	BatchPage.cotrainer(wd).click(); 
+	
+	WebElement selectElement = wd.findElement(By.id("select_container_24")); 
+	
+	List<WebElement> thelist = selectElement.findElements(By.tagName("md-option"));
+	System.out.println("test output: " + thelist.size()); //test output
+	for (WebElement component : thelist) {
+		System.out.println(component.getText());
+		if (component.getText().contains(batch.getCotrainer())) {  
+			component.click();
+			break;
+		}
+		else {
+			System.out.println("no match");
+		}
+	}			
+					
+}
+
+
+private static void SelectLocation(Batch batch) throws InterruptedException { 
+	
+	BatchPage.location(wd).click(); 
+	
+	WebElement selectElement = wd.findElement(By.id("select_container_26")); 
+	
+	List<WebElement> thelist = selectElement.findElements(By.tagName("md-option"));
+	System.out.println("test output: " + thelist.size()); //test output
+	for (WebElement component : thelist) {
+		System.out.println(component.getText());
+		if (component.getText().contains(batch.getLocation())) {  
+			component.click();
+			break;
+		}
+		else {
+			System.out.println("no match");
+		}
+	}			
+					
+}
+
+private static void SelectBuilding(Batch batch) throws InterruptedException { 
+	
+	BatchPage.building(wd).click(); 
+	
+	WebElement selectElement = wd.findElement(By.id("select_container_28")); 
+	
+	List<WebElement> thelist = selectElement.findElements(By.tagName("md-option"));
+	System.out.println("test output: " + thelist.size()); //test output
+	for (WebElement component : thelist) {
+		System.out.println(component.getText());
+		if (component.getText().contains(batch.getBuilding())) {  
+			component.click();
+			break;
+		}
+		else {
+			System.out.println("no match");
+		}
+	}			
+					
+}
+
+
+private static void SelectRoom(Batch batch) throws InterruptedException { 
+	
+	BatchPage.room(wd).click(); 
+	
+	WebElement selectElement = wd.findElement(By.id("select_container_30")); 
+	
+	List<WebElement> thelist = selectElement.findElements(By.tagName("md-option"));
+	System.out.println("test output: " + thelist.size()); //test output
+	for (WebElement component : thelist) {
+		System.out.println(component.getText());
+		if (component.getText().contains(Integer.toString(batch.getRoom()))) {  
+			component.click();
+			break;
+		}
+		else {
+			System.out.println("no match");
+		}
+	}			
+					
+}
 
 public static void containing(Batch batch) {
-		// skills is a different type of menu- needs research.
+		
 		
 		//start date requires datepicker knowledge. BatchPage.startdate(wd).click();
 		BatchPage.startdate(wd).click();
 		BatchPage.selectday(wd, "22").click();
 		
 		//end date requires datepicker knowledge. BatchPage.enddate(wd).click();
-		
-		Select dropdown3 = new Select(BatchPage.trainer(wd));
-		dropdown3.selectByVisibleText(batch.getTrainer());
-		
-		Select dropdown4 = new Select(BatchPage.cotrainer(wd));
-		dropdown4.selectByVisibleText(batch.getCotrainer());
-		
-		Select dropdown5 = new Select(BatchPage.location(wd));
-		dropdown5.selectByVisibleText(batch.getLocation());
-		
-		Select dropdown6 = new Select(BatchPage.building(wd));
-		dropdown6.selectByVisibleText(batch.getBuilding());
-		
-		Select dropdown7 = new Select(BatchPage.room(wd));
-		dropdown7.selectByValue(Integer.toString(batch.getRoom()));  // <-- pass the string returned by method
 		
 		//click create
 		BatchPage.createbatch(wd).click();
