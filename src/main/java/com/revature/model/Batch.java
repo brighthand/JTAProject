@@ -131,6 +131,14 @@ public class Batch { //implements Serializable {
 			this.trainer = trainer;
 		}
 		
+		public String getCotrainer() {
+			return cotrainer;
+		}
+		
+		public void setCotrainer() {
+			this.cotrainer = cotrainer;
+		}
+		
 		public String getLocation() {
 			return location;
 		}
