@@ -34,10 +34,10 @@ public class BatchPage {
 		return e;
 	}
 	
-	public static void StringMethod() {  //for testing
+	/*public static void StringMethod() {  //for testing
 	String choice = "36";
 	System.out.println("select_option_" + choice + "");
-	}
+	}*/
 	
 	
 		/*WebElement mySelectElm = driver.findElement(By.id("mySelectID")); 
@@ -73,17 +73,38 @@ public class BatchPage {
 	//these two methods are paired
 	public static WebElement startdate(WebDriver d) {
 		e = d.findElement(By.xpath("//*[@id=\"input_16\"]"));
+		//*[@id="select_container_12"]  xpath of input box
 		return e;
 	}
 	
+	public static WebElement startdate2(WebDriver d) {
+		//e = d.findElement(By.xpath("//*[@id=\"md-date-pane15\"]/div[1]"));
+		e = d.findElement(By.cssSelector("#input_19"));
+		return e;
+	}
+	
+	
 	public static WebElement selectday(WebDriver d, String day) {
-		//e = d.findElement(By.xpath("//*[@id=\"md-1-month-2018-0-'" + day + "'\"]/span")); 
-		e = d.findElement(By.xpath("//*[@id=\"md-1-month-2018-0-22\"]/span"));
-		System.out.println("//*[@id=\"md-1-month-2018-0-'" + day + "'\"]/span"); //no output
+		
+		e = d.findElement(By.xpath("//*[@id=\"md-1-month-2018-0-" + day + "\"]/span"));
+		
+		//e = d.findElement(By.cssSelector("#md-1-month-2018-0-" + day ));
+		//#md-1-month-2018-0-22  //csselector
+		
+		//e = d.findElement(By.id("md-3-month-2018-0-" + day ));
+		
+		System.out.println("attempting to print xpath");
+		System.out.println("//*[@id=\"md-1-month-2018-0-" + day + "\"]/span"); //prints the following: //*[@id="md-1-month-2018-0-22"]/span
+		System.out.println("attempting to print cssSelector");
+		System.out.println("#md-1-month-2018-0-" + day);
+		System.out.println("md-3-month-2018-0-" + day ); //this is by id
+		
+		
+		
 		return e;
 		//*[@id="md-1-month-2018-0-22"]/span  --this is the xpath
-		//*[@id="md-1-month-2018-0-15"]/span
-		//*[@id='md-1-month-2018-0-22']/span
+		//*[@id="md-1-month-2018-0-22"]/span
+		
 	}
 	//end of pairing
 	
@@ -104,7 +125,7 @@ public class BatchPage {
 	}
 	
 	public static WebElement location(WebDriver d) {
-		e = d.findElement(By.xpath("//*[@id=\"select_value_label_6\"]/span[1]/div"));
+		e = d.findElement(By.xpath("//*[@id=\"select_25\"]")); 
 		return e;
 	}
 	
@@ -121,7 +142,8 @@ public class BatchPage {
 	
 	//meta functionality
 	public static WebElement createbatch(WebDriver d) {
-		e = d.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content[1]/form/md-toolbar/button[1]/md-icon"));
+		//e = d.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content[1]/form/md-toolbar/button[1]/md-icon"));
+		e = d.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content[1]/form/md-toolbar/button[1]"));
 		return e;
 	}
 	
@@ -136,7 +158,7 @@ public class BatchPage {
 	}
 	
 	
-	//edit individual tubples
+	//edit individual tuples
 	public static WebElement edit(WebDriver d) {
 		e = d.findElement(By.xpath("<moving xpath solution required>"));
 		return e;

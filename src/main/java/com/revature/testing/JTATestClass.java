@@ -5,10 +5,13 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.revature.dao.BatchDaoImpl;
 import com.revature.model.Batch;
 import com.revature.pom.BatchPage;
@@ -16,7 +19,9 @@ import com.revature.pom.LoginPage;
 
 
 public class JTATestClass {
+	
 	static WebDriver wd = null;
+	static WebDriverWait wait;
 
 	public static void main(String[] args) throws InterruptedException {
 		
@@ -24,21 +29,22 @@ public class JTATestClass {
 	LoginMethod();
 	HeadToBatches();      
 	
-	
-	//for(int x = 1; x < 10; x++) {   //this retrieves the info from the DB
-	
 	BatchDaoImpl ed = new BatchDaoImpl();
 	Batch thebatch = ed.findById(5);
 	//System.out.println(thebatch.getCurriculum()); //--this successfully prints data
+	
+	SelectDates(thebatch);
 	SelectCurriculum(thebatch);
 	SelectFocus(thebatch);
 	//SelectSkills(thebatch); disabled for now
+	
 	SelectTrainer(thebatch);
 	SelectCotrainer(thebatch);
 	SelectLocation(thebatch);
 	SelectBuilding(thebatch);
 	SelectRoom(thebatch);
-	//}
+	ClickCreate();
+	
 	
 	//CancelBatch();
 		
@@ -84,9 +90,10 @@ private static void SelectCurriculum(Batch batch) throws InterruptedException { 
 			}
 			else {
 				System.out.println("no match");
+				//component.click();
 			}
 		}
-		
+		Thread.sleep(2000);//let the page load
 }
 
 private static void SelectFocus(Batch batch) throws InterruptedException { 
@@ -105,8 +112,10 @@ private static void SelectFocus(Batch batch) throws InterruptedException {
 		}
 		else {
 			System.out.println("no match");
+			//component.click();
 		}
-	}			
+	}	
+	Thread.sleep(2000);//let the page load
 					
 }
 
@@ -128,30 +137,53 @@ private static void SelectSkills(Batch batch) throws InterruptedException { //XM
 		}
 		else {
 			System.out.println("no match");
+			//component.click();
 		}
 	}			
-					
+	Thread.sleep(2000);//let the page load				
 }
 
-private static void SelectStartDate(Batch batch) throws InterruptedException {  //WORK IN PROGRESS
+private static void SelectDates(Batch batch) throws InterruptedException {  //WORK IN PROGRESS
 	
-	BatchPage.startdate(wd).click(); 
+	//BatchPage.startdate(wd).click(); 
+	Thread.sleep(1000);
 			//BatchPage.selectday(wd, "22").click();
 	
-	WebElement selectElement = wd.findElement(By.id("select_container_14"));  //containing class id
+	BatchPage.startdate(wd).sendKeys("1/15/2018");
+	Thread.sleep(1000);
+	BatchPage.startdate(wd).sendKeys(Keys.ENTER);
+	Thread.sleep(1000);
 	
-	List<WebElement> thelist = selectElement.findElements(By.tagName("md-option"));
-	System.out.println("test output: " + thelist.size()); //test output
-	for (WebElement component : thelist) {
-		System.out.println(component.getText());
-		if (component.getText().contains(batch.getSkills())) {  //input to be replaced with an xml source
-			component.click();
+	
+	BatchPage.enddate(wd).sendKeys("3/16/2018");
+	Thread.sleep(1000);
+	BatchPage.enddate(wd).sendKeys(Keys.ENTER);
+	Thread.sleep(1000);
+	 
+	
+	/*String day = "22";
+	WebElement selectDay = wd.findElement(By.xpath("//*[@id=\"md-1-month-2018-0-" + day + "\"]/span")); FAIL CODE!
+	System.out.println("md-3-month-2018-0-" + day );
+	selectDay.click();*/
+	
+	/*String day = "22";
+	wait = new WebDriverWait(wd, 5);  //for waiting, I guess
+	WebElement dateWidget = wd.findElement(By.cssSelector("#md-date-pane15 > div.md-datepicker-calendar"));
+	
+	List<WebElement> rows = dateWidget.findElements(By.tagName("tr"));
+	List<WebElement> columns = dateWidget.findElements(By.tagName("td"));
+	
+	for (WebElement cell: columns) {
+		System.out.println(cell.getText()); //successfully prints column data
+		if (cell.getText().equals(day)) {
+			System.out.println("found a date");
+			//cell.findElement(By.linkText("22")).click();
+			cell.findElement(By.xpath("//*[@id=\"md-1-month-2018-0-" + day + "\"]/span")).click();
 			break;
 		}
-		else {
-			System.out.println("no match");
-		}
-	}			
+	}*/
+	
+	
 					
 }
 
@@ -172,6 +204,7 @@ private static void SelectTrainer(Batch batch) throws InterruptedException {
 		}
 		else {
 			System.out.println("no match");
+			//component.click();
 		}
 	}			
 					
@@ -194,6 +227,7 @@ private static void SelectCotrainer(Batch batch) throws InterruptedException {
 		}
 		else {
 			System.out.println("no match");
+			//component.click();
 		}
 	}			
 					
@@ -216,6 +250,7 @@ private static void SelectLocation(Batch batch) throws InterruptedException {
 		}
 		else {
 			System.out.println("no match");
+			//component.click();
 		}
 	}			
 					
@@ -237,6 +272,8 @@ private static void SelectBuilding(Batch batch) throws InterruptedException {
 		}
 		else {
 			System.out.println("no match");
+			component.click();
+			break;
 		}
 	}			
 					
@@ -259,20 +296,15 @@ private static void SelectRoom(Batch batch) throws InterruptedException {
 		}
 		else {
 			System.out.println("no match");
+			component.click();
+			break;
 		}
 	}			
 					
 }
 
-public static void containing(Batch batch) {
-		
-		
-		//start date requires datepicker knowledge. BatchPage.startdate(wd).click();
-		BatchPage.startdate(wd).click();
-		BatchPage.selectday(wd, "22").click();
-		
-		//end date requires datepicker knowledge. BatchPage.enddate(wd).click();
-		
+public static void ClickCreate() {
+			
 		//click create
 		BatchPage.createbatch(wd).click();
 	}
