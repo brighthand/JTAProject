@@ -68,7 +68,7 @@ public class JTATestClass {
 	private static void HeadToBatches() throws InterruptedException {
 		
 		BatchPage.batchestab(wd).click();
-		Thread.sleep(2000);//let the page load
+		Thread.sleep(1000);//let the page load
 	}
 	
 	
@@ -93,7 +93,7 @@ private static void SelectCurriculum(Batch batch) throws InterruptedException { 
 				//component.click();
 			}
 		}
-		Thread.sleep(2000);//let the page load
+		Thread.sleep(1000);//let the page load
 }
 
 private static void SelectFocus(Batch batch) throws InterruptedException { 
@@ -115,7 +115,7 @@ private static void SelectFocus(Batch batch) throws InterruptedException {
 			//component.click();
 		}
 	}	
-	Thread.sleep(2000);//let the page load
+	Thread.sleep(1000);//let the page load
 					
 }
 
@@ -149,13 +149,13 @@ private static void SelectDates(Batch batch) throws InterruptedException {  //WO
 	Thread.sleep(1000);
 			//BatchPage.selectday(wd, "22").click();
 	
-	BatchPage.startdate(wd).sendKeys("1/15/2018");
+	BatchPage.startdate(wd).sendKeys(batch.getStratDate());
 	Thread.sleep(1000);
 	BatchPage.startdate(wd).sendKeys(Keys.ENTER);
 	Thread.sleep(1000);
 	
 	
-	BatchPage.enddate(wd).sendKeys("3/16/2018");
+	BatchPage.enddate(wd).sendKeys(batch.getEndDate());
 	Thread.sleep(1000);
 	BatchPage.enddate(wd).sendKeys(Keys.ENTER);
 	Thread.sleep(1000);
