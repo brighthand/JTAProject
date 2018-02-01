@@ -28,7 +28,7 @@ public class BatchDaoImpl implements BatchDao {
 		}
 	}
 	
-	@Override
+	/*@Override
 	public Batch findByName(String name) {
 		
 		Session session = ConnectionUtil.getSession().openSession();
@@ -40,7 +40,7 @@ public class BatchDaoImpl implements BatchDao {
 		} finally {
 			session.close();
 		}
-	}
+	}  no 'name' field featured in table  */
 	
 	
 	@SuppressWarnings("unchecked")

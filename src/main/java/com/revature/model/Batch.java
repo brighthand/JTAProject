@@ -18,58 +18,58 @@ public class Batch { //implements Serializable {
 		@Id
 		@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="seqname")
 		@SequenceGenerator(name="seqname", sequenceName="batch_seq_name", initialValue=1,allocationSize=1)
-		@Column(name="BATCH_ID", nullable=false)
+		@Column(name="BATCH_ID", nullable=false) 
 		private int batchid;
 		
-		@Column(name="NAME", length=10)
-		private String name;
+		//@Column(name="NAME", length=10)   --automatically created and therefore not necessary
+		//private String name;
 		
-		@Column(name="CURRICULUM", length=10)
+		@Column(name="CURRICULUM", length=20)
 		private String curriculum;
 		
-		@Column(name="FOCUS", length=10)
+		@Column(name="FOCUS", length=20)
 		private String focus;
 		
-		@Column(name="SKILLS", length=10)
+		@Column(name="SKILLS", length=20)
 		private String skills;
 		
-		@Column(name="NUMBEROFWEEKS")
-		private String numberOfWeeks;
+		//@Column(name="NUMBEROFWEEKS")   --automatically calculated by webapp, therefore excluded from table
+		//private String numberOfWeeks;
 		
-		@Column(name="TRAINER", length=10)
+		@Column(name="TRAINER", length=20)
 		private String trainer;
 		
-		@Column(name="COTRAINER", length=10)
+		@Column(name="COTRAINER", length=20)
 		private String cotrainer;
 		
-		@Column(name="LOCATION", length=10)
+		@Column(name="LOCATION", length=30)
 		private String location;
 		
-		@Column(name="BUILDING", length=10)
+		@Column(name="BUILDING", length=20)
 		private String building;
 		
 		@Column(name="ROOM", length=10)
 		private int room;
 		
 		@Column(name="STARTDATE", length=10)
-		private Date startdate;
+		private String startdate;     //format must be mm/dd/yyyy
 		
 		@Column(name="ENDDATE", length=10)
-		private Date enddate;
+		private String enddate;       //format must be mm/dd/yyyy
 		
 		public Batch() {
 			super();
 		}
 		
 		
-		public Batch(String name, String curriculum, String focus, String skills, String numberOfWeeks, String trainer, String cotrainer, String location, String building, int room, Date startdate, Date enddate) {
+		public Batch(String curriculum, String focus, String skills, String trainer, String cotrainer, String location, String building, int room, String startdate, String enddate) {
 		super();
 		
-		this.name = name;
+		//this.name = name;
 		this.curriculum = curriculum;
 		this.focus = focus;
 		this.skills = skills;
-		this.numberOfWeeks = numberOfWeeks;
+		//this.numberOfWeeks = numberOfWeeks;
 		this.trainer = trainer;
 		this.cotrainer = trainer;
 		this.location = location;
@@ -81,13 +81,13 @@ public class Batch { //implements Serializable {
 		
 	}
 		
-		public String getName() {
+		/*public String getName() {
 			return name;
 		}
 
 		public void setName(String name) {
 			this.name = name;	
-			}
+			}*/
 		
 		
 		public String getCurriculum() {
@@ -114,13 +114,13 @@ public class Batch { //implements Serializable {
 			this.skills = skills;
 		}
 		
-		public String getNumberOfWeeks() {
+		/*public String getNumberOfWeeks() {
 			return numberOfWeeks;
 		}
 		
 		public void setNumberOfWeeks() {
 			this.numberOfWeeks = numberOfWeeks;
-		}
+		}*/
 		
 		
 		public String getTrainer() {
@@ -129,6 +129,14 @@ public class Batch { //implements Serializable {
 		
 		public void setTrainer() {
 			this.trainer = trainer;
+		}
+		
+		public String getCotrainer() {
+			return cotrainer;
+		}
+		
+		public void setCotrainer() {
+			this.cotrainer = cotrainer;
 		}
 		
 		public String getLocation() {
@@ -156,7 +164,7 @@ public class Batch { //implements Serializable {
 			this.room = room;
 		}
 		
-		public Date getStratDate() {
+		public String getStratDate() {
 			return startdate;
 		}
 		
@@ -164,7 +172,7 @@ public class Batch { //implements Serializable {
 			this.startdate = startdate;
 		}
 		
-		public Date getEndDate() {
+		public String getEndDate() {
 			return enddate;
 		}
 		
