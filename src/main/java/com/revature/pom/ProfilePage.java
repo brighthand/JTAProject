@@ -1,5 +1,7 @@
 package com.revature.pom;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,10 +35,10 @@ public class ProfilePage {
 	}
 	
 	//Trainer can save resume
-	public static WebElement saveResume(WebDriver driver) {
-		element = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card[1]/md-content[2]/md-toolbar/div/button/i "));
+	public static WebElement saveSkills(WebDriver driver) {
+		element = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card[1]/md-content[2]/md-toolbar/div/button"));
 		return element;
-	}
+	}                                              //*[@id="view"]/md-card[1]/md-content[2]/md-toolbar/div/button
 	
 	//Trainer can select skill
 	public static WebElement selectSkill(WebDriver driver) {
@@ -46,19 +48,47 @@ public class ProfilePage {
 	
 	//Trainer current skill
 	public static WebElement currentSkill(WebDriver driver) {
-		element = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card[1]/md-content[2]/div/md-list/button[1] "));
+		element = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card[1]/md-content[2]/div/md-list/button[1]"));
+		return element;                        //*[@id="view"]/md-card[1]/md-content[2]/div/md-list/button[1]
+	}
+	
+	//Trainer add certification
+	public static WebElement addCertification(WebDriver driver) {
+		element = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card[1]/md-content[3]/md-toolbar/div/label/md-icon"));
 		return element;
 	}
 	
 	//Trainer add certification
-	public static WebElement addCertifications(WebDriver driver) {
-		element = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card[1]/md-content[3]/md-toolbar/div/label/md-icon "));
+	public static WebElement removeCertification(WebDriver driver) {
+		element = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card[1]/md-content[3]/div/md-list/md-list-item[1]/button"));
 		return element;
 	}
 	
+	//******************LISTS ***********************************
 	
+	//Skills list
+	public static int skillsList(WebDriver driver) {
+		
+		List<WebElement> list = 
+				driver.findElements(By.xpath("//*[@id=\"view\"]/md-card[1]/md-content[2]/div/md-chips/md-chips-wrap/*"));
+		return list.size();
+	}
 	
+	//Current skills list
+	public static int currentskillsList(WebDriver driver) {
+		
+		List<WebElement> list = 
+				driver.findElements(By.xpath("//*[@id=\"view\"]/md-card[1]/md-content[2]/div/md-list/*"));
+		return list.size();
+	}
 	
+	//***********************POPUP BOX ******************************************
+	
+	//Trainer add certification
+	public static WebElement popupBox(WebDriver driver) {
+		element = driver.findElement(By.xpath("/html/body/md-toast/div/span"));
+		return element;
+	}
 	
 
 }
