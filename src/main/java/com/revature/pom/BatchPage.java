@@ -18,7 +18,6 @@ public class BatchPage {
 	
 	
 	//CONSTRUCTION ZONE
-	
 	public static WebElement corecurriculum(WebDriver d) {
 		e = d.findElement(By.id("select_9")); //*[@id="select_9"]
 		return e;

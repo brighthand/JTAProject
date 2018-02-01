@@ -47,7 +47,6 @@ public class JTATestClass {
 	
 	
 	//CancelBatch();
-		
 	}
 	
 	private static void openApplication() {
@@ -341,5 +340,7 @@ private static void EditBatch(Batch batch) {  //pass a batch in to make some cha
 	//click create
 	BatchPage.createbatch(wd).click();
 }
+
+
 
 }

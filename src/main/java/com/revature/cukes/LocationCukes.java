@@ -3,7 +3,6 @@ package com.revature.cukes;
 
 import org.openqa.selenium.WebDriver;
 
-import com.revature.pom.BatchesPage;
 import com.revature.pom.LocationsPage;
 
 import cucumber.api.PendingException;

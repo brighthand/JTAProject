@@ -3,11 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.revature.runners.ProfileTestRunner">
+      <class name="com.revature.runners.BatchTestRunner">
         <methods>
-          <include name="saveSkills"/>
+          <include name="SelectTrainer"/>
+          <include name="SelectRoom"/>
         </methods>
-      </class> <!-- com.revature.runners.ProfileTestRunner -->
+      </class> <!-- com.revature.runners.BatchTestRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
