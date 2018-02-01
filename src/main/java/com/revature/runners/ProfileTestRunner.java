@@ -159,6 +159,8 @@ public class ProfileTestRunner {
 			
 			e.printStackTrace();
 		}
+		
+		Assert.assertTrue(popupBoxTxt.equals(""));
 	}
 	
 	
