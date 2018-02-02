@@ -41,25 +41,25 @@ public class OverviewTestRunner {
 	
 	
 	//Filter in progress
-	//Bad
-	@Test(priority = 3, enabled = false)
+	//Good
+	@Test(priority = 3, enabled = true)
 	public static void filterInProgress() {
 		
 		String label = null;
 		
 		try {
 			
-			//Thread.sleep(2000);
+			Thread.sleep(2000);
 			OverviewCukes.i_m_in_the_overview_page(driver);
 			
-			//Thread.sleep(5000);
+			Thread.sleep(2000);
 			OverviewCukes.i_click_the_filter_button(driver);
 			
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			OverviewCukes.select_in_progress(driver);
 			label = OverviewPage.filterLabel(driver).getText();
 			
-			//Thread.sleep(2000);
+			Thread.sleep(2000);
 			
 		} catch (Throwable e) {
 			e.printStackTrace();
@@ -71,12 +71,15 @@ public class OverviewTestRunner {
 
 	//Filter Beginning In Two Weeks
 	//Good
-	@Test(priority = 4, enabled = false)
+	@Test(priority = 4, enabled = true)
 	public static void filterBegInTwoWeeks() {
 		String label = null;
 		try {
 			
+			Thread.sleep(2000);
 			OverviewCukes.i_m_in_the_overview_page(driver);
+			
+			Thread.sleep(2000);
 			OverviewCukes.i_click_the_filter_button(driver);
 			
 			Thread.sleep(2000);
@@ -96,16 +99,21 @@ public class OverviewTestRunner {
 	
 	//Filter all
 	//Good
-	@Test(priority = 5, enabled = false)
+	@Test(priority = 5, enabled = true)
 	public static void filterAll() {
 		String label = null;
 		try {
+			
+			Thread.sleep(2000);
 			OverviewCukes.i_m_in_the_overview_page(driver);
+			
 			Thread.sleep(2000);
 			OverviewCukes.i_click_the_filter_button(driver);
+			
 			Thread.sleep(2000);
 			OverviewCukes.select_all(driver);
 			
+			Thread.sleep(2000);
 			label = OverviewPage.filterLabel(driver).getText();
 			System.out.println("Label: " + label);
 			
@@ -119,15 +127,18 @@ public class OverviewTestRunner {
 	
 	
 	//Export csv
-	@Test(priority = 6, enabled = true)
+	//
+	@Test(priority = 6, enabled = false)
 	public static void exportCSV() {
 		String label = null;
 		try {
 			
+			Thread.sleep(2000);
 			OverviewCukes.i_m_in_the_overview_page(driver);
 			
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			OverviewCukes.i_click_the_export_to_csv_button(driver);
+			
 			Thread.sleep(5000);
 			//label = OverviewPage.filterLabel(driver).getAttribute(arg0)
 			
@@ -136,7 +147,7 @@ public class OverviewTestRunner {
 			e.printStackTrace();
 		}
 		
-		//Assert.assertTrue(label.equals("All Batches"));
+		//Assert.assertTrue();
 	}
 	
 	

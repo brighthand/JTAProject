@@ -85,8 +85,11 @@ public class LocationsPage {
 
 	// Select building with checkbox
 	public static WebElement selectBuilding(WebDriver driver) {
-		element = driver.findElement(By.xpath("//*[@id=\"loc335\"]/md-list-item[1]/div/div[1]/md-checkbox"));
-		return element;                        
+		element = driver.findElement(By.xpath("//*[starts-with(@id=loc, \"loc\")]/md-list-item[1]/div/div[1]/md-checkbox"));
+		return element;                        //*[@id="view"]/md-card/md-content/md-list/md-list-item[1]/div[1]/div[1]/md-checkbox
+		                                       //*[@id="loc3"]/md-list-item[1]/div/div[1]/md-checkbox
+		
+		                                       // driver.findElement(By.xpath("//* [start-with(@id,'title')]"))
 	}                                          //*[starts-with(@id=\"loc\")]/md-list-item[1]/div/div[1]/md-checkbox
 
 	

@@ -83,7 +83,7 @@ public class ProfilePage {
 	}
 	
 	//***********************POPUP BOX ******************************************
-	
+	//Used throughout the code
 	//Trainer add certification
 	public static WebElement popupBox(WebDriver driver) {
 		element = driver.findElement(By.xpath("/html/body/md-toast/div/span"));

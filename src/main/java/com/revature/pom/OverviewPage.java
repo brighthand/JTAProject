@@ -28,8 +28,8 @@ public class OverviewPage {
 	
 	// Filter In progress
 	public static WebElement filterInProgress(WebDriver driver) {
-		element = driver.findElement(By.xpath("//*[@id=\"menu_container_1\"]/md-menu-content/md-menu-item[1]/button"));
-		return element;                          //*[@id="menu_container_1"]/md-menu-content/md-menu-item[1]/button
+		element = driver.findElement(By.xpath("//*[@id=\"menu_container_0\"]/md-menu-content/md-menu-item[1]/button"));
+		return element;                         //*[@id="menu_container_0"]/md-menu-content/md-menu-item[1]/button
 	}
 	
 	// Filter Begin in two weeks

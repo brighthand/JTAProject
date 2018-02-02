@@ -1,63 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="6" total="16" passed="8">
+<testng-results skipped="0" failed="3" ignored="3" total="16" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="94216" started-at="2018-02-01T19:10:49Z" finished-at="2018-02-01T19:12:24Z">
+  <suite name="Default suite" duration-ms="137167" started-at="2018-02-02T02:02:50Z" finished-at="2018-02-02T02:05:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="94216" started-at="2018-02-01T19:10:49Z" finished-at="2018-02-01T19:12:24Z">
+    <test name="Default test" duration-ms="137167" started-at="2018-02-02T02:02:50Z" finished-at="2018-02-02T02:05:07Z">
       <class name="com.revature.runners.BatchTestRunner">
-        <test-method status="PASS" signature="openApplication()[pri:1, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="openApplication" duration-ms="9930" started-at="2018-02-01T11:10:49Z" finished-at="2018-02-01T11:10:59Z">
+        <test-method status="PASS" signature="openApplication()[pri:1, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="openApplication" duration-ms="7681" started-at="2018-02-01T18:02:50Z" finished-at="2018-02-01T18:02:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApplication -->
-        <test-method status="PASS" signature="LoginMethod()[pri:2, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="LoginMethod" duration-ms="5499" started-at="2018-02-01T11:10:59Z" finished-at="2018-02-01T11:11:05Z">
+        <test-method status="PASS" signature="LoginMethod()[pri:2, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="LoginMethod" duration-ms="4728" started-at="2018-02-01T18:02:58Z" finished-at="2018-02-01T18:03:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginMethod -->
-        <test-method status="PASS" signature="HeadToBatches()[pri:3, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="HeadToBatches" duration-ms="4513" started-at="2018-02-01T11:11:05Z" finished-at="2018-02-01T11:11:09Z">
+        <test-method status="PASS" signature="HeadToBatches()[pri:3, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="HeadToBatches" duration-ms="3115" started-at="2018-02-01T18:03:03Z" finished-at="2018-02-01T18:03:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HeadToBatches -->
-        <test-method status="PASS" signature="SelectCurriculum()[pri:4, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="SelectCurriculum" duration-ms="12178" started-at="2018-02-01T11:11:09Z" finished-at="2018-02-01T11:11:21Z">
+        <test-method status="PASS" signature="SelectCurriculum()[pri:4, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="SelectCurriculum" duration-ms="12417" started-at="2018-02-01T18:03:06Z" finished-at="2018-02-01T18:03:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SelectCurriculum -->
-        <test-method status="PASS" signature="SelectFocus()[pri:5, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="SelectFocus" duration-ms="7455" started-at="2018-02-01T11:11:22Z" finished-at="2018-02-01T11:11:29Z">
+        <test-method status="PASS" signature="SelectFocus()[pri:5, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="SelectFocus" duration-ms="6935" started-at="2018-02-01T18:03:18Z" finished-at="2018-02-01T18:03:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SelectFocus -->
-        <test-method status="PASS" signature="SelectSkills()[pri:6, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="SelectSkills" duration-ms="38717" started-at="2018-02-01T11:11:29Z" finished-at="2018-02-01T11:12:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SelectSkills -->
-        <test-method status="PASS" signature="SelectDates()[pri:7, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="SelectDates" duration-ms="13406" started-at="2018-02-01T11:12:08Z" finished-at="2018-02-01T11:12:21Z">
+        <test-method status="PASS" signature="SelectDates()[pri:7, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="SelectDates" duration-ms="12902" started-at="2018-02-01T18:03:25Z" finished-at="2018-02-01T18:03:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SelectDates -->
-        <test-method status="FAIL" signature="SelectTrainer()[pri:8, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="SelectTrainer" duration-ms="895" started-at="2018-02-01T11:12:21Z" finished-at="2018-02-01T11:12:22Z">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method status="PASS" signature="SelectTrainer()[pri:8, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="SelectTrainer" duration-ms="42504" started-at="2018-02-01T18:03:38Z" finished-at="2018-02-01T18:04:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SelectTrainer -->
+        <test-method status="PASS" signature="SelectCotrainer()[pri:9, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="SelectCotrainer" duration-ms="37988" started-at="2018-02-01T18:04:21Z" finished-at="2018-02-01T18:04:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SelectCotrainer -->
+        <test-method status="FAIL" signature="SelectLocation()[pri:10, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="SelectLocation" duration-ms="4995" started-at="2018-02-01T18:04:58Z" finished-at="2018-02-01T18:05:03Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
             <message>
-              <![CDATA[unknown error: Element <md-select ng-model="bCtrl.batch.trainer" class="ng-pristine ng-untouched ng-valid ng-empty" tabindex="0" aria-disabled="false" role="listbox" aria-expanded="false" aria-multiselectable="false" id="select_21" aria-owns="select_container_22" aria-invalid="false" aria-label=" Trainer ">...</md-select> is not clickable at point (274, 431). Other element would receive the click: <md-backdrop class="md-select-backdrop md-click-catcher ng-scope" style="height: 576px; position: fixed;"></md-backdrop>
+              <![CDATA[element not visible
   (Session info: chrome=63.0.3239.132)
   (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
 System info: host: 'STEPHEN-PC', ip: '192.168.61.107', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Stephen\AppData\Local\Temp\scoped_dir11344_10999}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=63.0.3239.132, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: cf662577762cacbd93ebc51d25806cb9]]>
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Stephen\AppData\Local\Temp\scoped_dir12860_7305}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=63.0.3239.132, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 215404e2378c06dd065d88fa076f8bd7]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <md-select ng-model="bCtrl.batch.trainer" class="ng-pristine ng-untouched ng-valid ng-empty" tabindex="0" aria-disabled="false" role="listbox" aria-expanded="false" aria-multiselectable="false" id="select_21" aria-owns="select_container_22" aria-invalid="false" aria-label=" Trainer ">...</md-select> is not clickable at point (274, 431). Other element would receive the click: <md-backdrop class="md-select-backdrop md-click-catcher ng-scope" style="height: 576px; position: fixed;"></md-backdrop>
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: element not visible
   (Session info: chrome=63.0.3239.132)
   (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
 System info: host: 'STEPHEN-PC', ip: '192.168.61.107', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Stephen\AppData\Local\Temp\scoped_dir11344_10999}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=63.0.3239.132, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: cf662577762cacbd93ebc51d25806cb9
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Stephen\AppData\Local\Temp\scoped_dir12860_7305}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=63.0.3239.132, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 215404e2378c06dd065d88fa076f8bd7
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -72,7 +76,7 @@ Session ID: cf662577762cacbd93ebc51d25806cb9
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:275)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at com.revature.runners.BatchTestRunner.SelectTrainer(BatchTestRunner.java:171)
+	at com.revature.runners.BatchTestRunner.SelectLocation(BatchTestRunner.java:239)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -100,11 +104,15 @@ Session ID: cf662577762cacbd93ebc51d25806cb9
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SelectTrainer -->
-        <test-method status="FAIL" signature="SelectRoom()[pri:12, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="SelectRoom" duration-ms="841" started-at="2018-02-01T11:12:22Z" finished-at="2018-02-01T11:12:23Z">
+        </test-method> <!-- SelectLocation -->
+        <test-method status="PASS" signature="SelectBuilding()[pri:11, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="SelectBuilding" duration-ms="1899" started-at="2018-02-01T18:05:04Z" finished-at="2018-02-01T18:05:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SelectBuilding -->
+        <test-method status="FAIL" signature="SelectRoom()[pri:12, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="SelectRoom" duration-ms="701" started-at="2018-02-01T18:05:05Z" finished-at="2018-02-01T18:05:06Z">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[unknown error: Element <md-select ng-model="bCtrl.batch.room" class="ng-pristine ng-untouched ng-valid ng-empty" tabindex="0" aria-disabled="false" role="listbox" aria-expanded="false" aria-multiselectable="false" id="select_29" aria-owns="select_container_30" aria-invalid="false" aria-label=" Room ">...</md-select> is not clickable at point (820, 507). Other element would receive the click: <md-backdrop class="md-select-backdrop md-click-catcher ng-scope" style="height: 576px; position: fixed;"></md-backdrop>
@@ -114,8 +122,8 @@ Command duration or timeout: 0 milliseconds
 Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
 System info: host: 'STEPHEN-PC', ip: '192.168.61.107', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Stephen\AppData\Local\Temp\scoped_dir11344_10999}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=63.0.3239.132, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: cf662577762cacbd93ebc51d25806cb9]]>
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Stephen\AppData\Local\Temp\scoped_dir12860_7305}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=63.0.3239.132, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 215404e2378c06dd065d88fa076f8bd7]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <md-select ng-model="bCtrl.batch.room" class="ng-pristine ng-untouched ng-valid ng-empty" tabindex="0" aria-disabled="false" role="listbox" aria-expanded="false" aria-multiselectable="false" id="select_29" aria-owns="select_container_30" aria-invalid="false" aria-label=" Room ">...</md-select> is not clickable at point (820, 507). Other element would receive the click: <md-backdrop class="md-select-backdrop md-click-catcher ng-scope" style="height: 576px; position: fixed;"></md-backdrop>
@@ -125,8 +133,8 @@ Command duration or timeout: 0 milliseconds
 Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
 System info: host: 'STEPHEN-PC', ip: '192.168.61.107', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Stephen\AppData\Local\Temp\scoped_dir11344_10999}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=63.0.3239.132, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: cf662577762cacbd93ebc51d25806cb9
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Stephen\AppData\Local\Temp\scoped_dir12860_7305}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=63.0.3239.132, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 215404e2378c06dd065d88fa076f8bd7
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -141,7 +149,7 @@ Session ID: cf662577762cacbd93ebc51d25806cb9
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:275)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at com.revature.runners.BatchTestRunner.SelectRoom(BatchTestRunner.java:262)
+	at com.revature.runners.BatchTestRunner.SelectRoom(BatchTestRunner.java:277)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -173,7 +181,76 @@ Session ID: cf662577762cacbd93ebc51d25806cb9
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SelectRoom -->
-        <test-method status="PASS" signature="closeApplication()[pri:16, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="closeApplication" duration-ms="618" started-at="2018-02-01T11:12:23Z" finished-at="2018-02-01T11:12:24Z">
+        <test-method status="FAIL" signature="ClickCreate()[pri:13, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="ClickCreate" duration-ms="683" started-at="2018-02-01T18:05:06Z" finished-at="2018-02-01T18:05:07Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: Element <button class="md-icon-button md-button md-ink-ripple" type="submit" ng-transclude="" aria-label="Create Batch">...</button> is not clickable at point (918, 199). Other element would receive the click: <md-backdrop class="md-select-backdrop md-click-catcher ng-scope" style="height: 576px; position: fixed;"></md-backdrop>
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'STEPHEN-PC', ip: '192.168.61.107', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Stephen\AppData\Local\Temp\scoped_dir12860_7305}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=63.0.3239.132, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 215404e2378c06dd065d88fa076f8bd7]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <button class="md-icon-button md-button md-ink-ripple" type="submit" ng-transclude="" aria-label="Create Batch">...</button> is not clickable at point (918, 199). Other element would receive the click: <md-backdrop class="md-select-backdrop md-click-catcher ng-scope" style="height: 576px; position: fixed;"></md-backdrop>
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'STEPHEN-PC', ip: '192.168.61.107', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Stephen\AppData\Local\Temp\scoped_dir12860_7305}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=63.0.3239.132, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 215404e2378c06dd065d88fa076f8bd7
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:275)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+	at com.revature.runners.BatchTestRunner.ClickCreate(BatchTestRunner.java:303)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickCreate -->
+        <test-method status="PASS" signature="closeApplication()[pri:16, instance:com.revature.runners.BatchTestRunner@13f17eb4]" name="closeApplication" duration-ms="490" started-at="2018-02-01T18:05:07Z" finished-at="2018-02-01T18:05:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->

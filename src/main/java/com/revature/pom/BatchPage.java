@@ -17,6 +17,8 @@ public class BatchPage {
 	}
 	
 	
+	
+	
 	//CONSTRUCTION ZONE
 	public static WebElement corecurriculum(WebDriver d) {
 		e = d.findElement(By.id("select_9")); //*[@id="select_9"]
@@ -125,6 +127,11 @@ public class BatchPage {
 	
 	public static WebElement location(WebDriver d) {
 		e = d.findElement(By.xpath("//*[@id=\"select_25\"]")); 
+		return e;       //*[@id="select_option_690"]
+	}
+	
+	public static WebElement locationCheckbox(WebDriver d) {
+		e = d.findElement(By.xpath("//*[@id=\"select_option_690\"] "));
 		return e;
 	}
 	

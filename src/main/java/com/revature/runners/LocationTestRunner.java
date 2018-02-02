@@ -34,6 +34,11 @@ public class LocationTestRunner {
 		LoginPage.submit(driver).click();
 		// LoginPage.user(driver).sendKeys("test.trainer@revature.com.int1");
 		// LoginPage.password(driver).sendKeys("trainer123");
+		try {
+			LocationCukes.i_m_on_the_locations_page(driver);
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
 	}
 
 	// Adding new location
@@ -145,7 +150,7 @@ public class LocationTestRunner {
 
 	// Edit location
 	// GOOD
-	@Test(priority = 6, enabled = false)
+	@Test(priority = 6, enabled = true)
 	public void editLocation() {
 		String locationBefore = null, locationAfter = null;
 
@@ -159,7 +164,7 @@ public class LocationTestRunner {
 
 			System.out.println("locationBefore: " + locationBefore);
 
-		    LocationCukes.i_clear_the_location_form(driver);
+		    //LocationCukes.i_clear_the_location_form(driver);
 			LocationCukes.edit_location_information(driver);
 			LocationCukes.click_the_save_button(driver);
 
@@ -177,7 +182,7 @@ public class LocationTestRunner {
 
 	// Edit building
 	// Good
-	@Test(priority = 7, enabled = true)
+	@Test(priority = 7, enabled = false)
 	public void editBuilding() {
 		String buildingBefore = null, buildingAfter = null;
 
@@ -190,7 +195,7 @@ public class LocationTestRunner {
 			buildingBefore = LocationsPage.buildingButton(driver).getAttribute("aria-label");
 			System.out.println("buildingBefore: " + buildingBefore);
 
-			LocationCukes.i_clear_the_location_form(driver);
+			//LocationCukes.i_clear_the_location_form(driver);
 			Thread.sleep(2000);
 			LocationCukes.edit_building_information(driver);
 

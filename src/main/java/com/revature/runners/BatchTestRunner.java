@@ -9,12 +9,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.revature.dao.BatchDaoImpl;
 import com.revature.model.Batch;
 import com.revature.pom.BatchPage;
 import com.revature.pom.LoginPage;
+import com.revature.pom.ProfilePage;
 
 public class BatchTestRunner {
 
@@ -53,8 +55,11 @@ public class BatchTestRunner {
 	@Test(priority = 4, enabled = true)
 	private static void SelectCurriculum() throws InterruptedException { // can't create a batch without a
 																					// batch!
+		String curriculum = null;
 		
 		BatchPage.corecurriculum(wd).click();
+		curriculum = BatchPage.corecurriculum(wd).getText();
+		System.out.println("Before Curriculum: " + curriculum );
 
 		Thread.sleep(1000);
 		WebElement selectElement = wd.findElement(By.id("select_container_10")); // containing class id
@@ -71,13 +76,20 @@ public class BatchTestRunner {
 				// component.click();
 			}
 		}
+		curriculum = BatchPage.corecurriculum(wd).getText();
+		System.out.println("After Curriculum: " + curriculum );
+		
 		Thread.sleep(3000);// let the page load
+		
+		Assert.assertTrue(!curriculum.equals("Core Curriculum"));
 	}
 	
 
 	@Test(priority = 5, enabled = true)
 	private static void SelectFocus() throws InterruptedException {
 
+		String focus = null;
+		
 		BatchPage.focus(wd).click();
 
 		Thread.sleep(1000);
@@ -95,16 +107,20 @@ public class BatchTestRunner {
 				// component.click();
 			}
 		}
+		
+		focus = BatchPage.focus(wd).getText();
+		
 		Thread.sleep(3000);// let the page load
-
+		
+		Assert.assertTrue(focus.equals("Focus"));
 	}
 
-	@Test(priority = 6, enabled = true)
+	@Test(priority = 6, enabled = false)
 	private static void SelectSkills() throws InterruptedException { // XML FILE NEEDED FOR SOURCE
 
 		BatchPage.skills(wd).click();
 
-		Thread.sleep(1000);
+		//Thread.sleep(1000);
 		WebElement selectElement = wd.findElement(By.id("select_container_14")); // containing class id
 
 		List<WebElement> thelist = selectElement.findElements(By.tagName("md-option"));
@@ -119,7 +135,7 @@ public class BatchTestRunner {
 				// component.click();
 			}
 		}
-		Thread.sleep(2000);// let the page load
+		//Thread.sleep(2000);// let the page load
 	}
 
 	@Test(priority = 7, enabled = true)
@@ -165,13 +181,14 @@ public class BatchTestRunner {
 
 	}
 
-	@Test(priority = 8, enabled = false)
+	@Test(priority = 8, enabled = true)
 	private static void SelectTrainer() throws InterruptedException {
 
 		BatchPage.trainer(wd).click();
 
 		WebElement selectElement = wd.findElement(By.id("select_container_22")); // containing class id
 
+		Thread.sleep(2000);
 		List<WebElement> thelist = selectElement.findElements(By.tagName("md-option"));
 		System.out.println("test output: " + thelist.size()); // test output
 		for (WebElement component : thelist) {
@@ -189,7 +206,7 @@ public class BatchTestRunner {
 
 	}
 
-	@Test(priority = 9, enabled = false)
+	@Test(priority = 9, enabled = true)
 	private static void SelectCotrainer() throws InterruptedException {
 
 		BatchPage.cotrainer(wd).click();
@@ -211,9 +228,10 @@ public class BatchTestRunner {
 
 	}
 
-	@Test(priority = 10, enabled = false)
+	@Test(priority = 10, enabled = true)
 	private static void SelectLocation() throws InterruptedException {
 
+		
 		BatchPage.location(wd).click();
 
 		WebElement selectElement = wd.findElement(By.id("select_container_26"));
@@ -227,15 +245,18 @@ public class BatchTestRunner {
 				break;
 			} else {
 				System.out.println("no match");
-				// component.click();
+				 component.click();
 			}
 		}
+		
+		//BatchPage.location(wd).sendKeys("Future Gadget Lab - Akihabara, VA");
 
 	}
 
-	@Test(priority = 11, enabled = false)
+	@Test(priority = 11, enabled = true)
 	private static void SelectBuilding() throws InterruptedException {
 
+		
 		BatchPage.building(wd).click();
 
 		WebElement selectElement = wd.findElement(By.id("select_container_28"));
@@ -253,12 +274,15 @@ public class BatchTestRunner {
 				break;
 			}
 		}
+		
+		//BatchPage.location(wd).sendKeys("Test Building");
 
 	}
 
-	@Test(priority = 12, enabled = false)
+	@Test(priority = 12, enabled = true)
 	private static void SelectRoom() throws InterruptedException {
 
+		
 		BatchPage.room(wd).click();
 
 		WebElement selectElement = wd.findElement(By.id("select_container_30"));
@@ -276,14 +300,17 @@ public class BatchTestRunner {
 				break;
 			}
 		}
+		
+		//BatchPage.location(wd).sendKeys("101");
 
 	}
 
-	@Test(priority = 13, enabled = false)
+	@Test(priority = 13, enabled = true)
 	public static void ClickCreate() {
-
-		// click create
+		String status = null;
+		
 		BatchPage.createbatch(wd).click();
+		ProfilePage.popupBox(wd).getText();
 	}
 
 	// END CONSTRUCTION ZONE

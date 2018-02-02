@@ -34,18 +34,25 @@ public class ProfileTestRunner {
 		LoginPage.user(driver).sendKeys("test.trainer@revature.com.int1");
 		LoginPage.password(driver).sendKeys("trainer123");
 		LoginPage.submit(driver).click();
+		
+		try {
+			ProfileCukes.i_m_in_the_profile_page(driver);
+		} catch (Throwable e) {
+		
+			e.printStackTrace();
+		}
 	}
 	
 
 	//Selecting a skill i.e adding a skill
 	//Good
-	@Test(priority = 3, enabled = false)
+	@Test(priority = 3, enabled = true)
 	public static void selectSkill() {
 		int before = 0, after = 0;
 		try {
 			
 			//Thread.sleep(2000);
-			ProfileCukes.i_m_in_the_profile_page(driver);
+			//ProfileCukes.i_m_in_the_profile_page(driver);
 			
 			Thread.sleep(2000);
 			before = ProfilePage.skillsList(driver);
@@ -71,14 +78,14 @@ public class ProfileTestRunner {
 	
 	//Remove skill
 	//Good
-	@Test(priority = 4, enabled = false)
+	@Test(priority = 4, enabled = true)
 	public static void removeSkill() {
 		int before = 0, after = 0;
 			
 			try {
 				
 				
-				ProfileCukes.i_m_in_the_profile_page(driver);
+				//ProfileCukes.i_m_in_the_profile_page(driver);
 				
 				Thread.sleep(2000);
 				before = ProfilePage.currentskillsList(driver);
@@ -104,6 +111,7 @@ public class ProfileTestRunner {
 	Scenario: Add certification
     Given I'm in the profile page
     Then I click the add certification button
+    Find way to test upload
 	 */
 	@Test(priority = 5, enabled = false)
 	public void addCertification() {
@@ -126,7 +134,7 @@ public class ProfileTestRunner {
 		try {
 			
 			//Thread.sleep(2000);
-			ProfileCukes.i_m_in_the_profile_page(driver);
+			//ProfileCukes.i_m_in_the_profile_page(driver);
 			
 			Thread.sleep(2000);
 			ProfileCukes.i_click_the_save_skills_button(driver);
@@ -144,12 +152,13 @@ public class ProfileTestRunner {
 	
 	
 	//Remove certification
+	@Test(priority = 7, enabled = true)
 	public void removeCertification() {
 		String popupBoxTxt = null;
 		try {
 			
-			Thread.sleep(2000);
-			ProfileCukes.i_m_in_the_profile_page(driver);
+			//Thread.sleep(2000);
+			//ProfileCukes.i_m_in_the_profile_page(driver);
 			Thread.sleep(2000);
 			ProfileCukes.i_click_the_remove_certification_button(driver);
 			popupBoxTxt = ProfilePage.popupBox(driver).getText();
@@ -160,7 +169,7 @@ public class ProfileTestRunner {
 			e.printStackTrace();
 		}
 		
-		Assert.assertTrue(popupBoxTxt.equals(""));
+		Assert.assertTrue(popupBoxTxt.equals("Removed Certification Successfully"));
 	}
 	
 	
