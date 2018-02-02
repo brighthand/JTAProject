@@ -39,13 +39,22 @@ public class TrainersCukes {
 
 	@When("^VP entered Richard first name$")
 	public static void vp_entered_Richard_first_name(WebDriver driver) throws Throwable {
+<<<<<<< HEAD
 		TrainersPage.FirstName(driver).sendKeys("John");
+=======
+		
+		TrainersPage.FirstName(driver).sendKeys("David");
+>>>>>>> stephen_oduor_backup
 	   
 	}
 
 	@When("^VP entered Bumer last name$")
 	public static void vp_entered_Bumer_last_name(WebDriver driver) throws Throwable {
+<<<<<<< HEAD
 		TrainersPage.LastName(driver).sendKeys("Mitt");
+=======
+		TrainersPage.LastName(driver).sendKeys("Smith");
+>>>>>>> stephen_oduor_backup
 	}
 
 	@When("^VP clicks on save$")
@@ -82,14 +91,22 @@ public class TrainersCukes {
 	@Then("^Size of inactive trainers remains the same$")
 	public static void size_of_inactive_trainers_remains_the_same(WebDriver driver) throws Throwable {
 		
+<<<<<<< HEAD
 		TrainersPage.size_of_inactivetrainers(driver);
+=======
+		TrainersPage.popup(driver);
+>>>>>>> stephen_oduor_backup
 	}
 
 	@Given("^VP clicks on the deactivate button for Matt Patinos$")
 	public static void vp_clicks_on_the_deactivate_button_for_Matt_Patinos(WebDriver driver) throws Throwable {
 		
+<<<<<<< HEAD
 		TrainersPage.deactivate(driver).click();
 	    
+=======
+		TrainersPage.deactivate(driver, String.valueOf(6)).click();
+>>>>>>> stephen_oduor_backup
 	}
 
 	@Then("^Size of trainers decreases by (\\d+)$")
@@ -99,7 +116,11 @@ public class TrainersCukes {
 
 	@Given("^VP clicked on the activate button for inactive trainer Richard Smith$")
 	public static void vp_clicked_on_the_activate_button_for_inactive_trainer_Richard_Smith(WebDriver driver) throws Throwable {
+<<<<<<< HEAD
 		TrainersPage.reactivate(driver, String.valueOf(25)).click();
+=======
+		TrainersPage.reactivate(driver, String.valueOf(4)).click();
+>>>>>>> stephen_oduor_backup
 	}
 
 	@Then("^Size of inactive trainers is decreased by (\\d+)$")
@@ -232,7 +253,11 @@ public class TrainersCukes {
 	@When("^VP clicked on send$")
 	public static void vp_clicked_on_send(WebDriver driver) throws Throwable {
 		
+<<<<<<< HEAD
 		TrainersPage.requestpto_send(driver).click();
+=======
+		TrainersPage.requestpto_send(driver);
+>>>>>>> stephen_oduor_backup
 	}
 
 	@Then("^VP is directed to choose a Gmail account$")

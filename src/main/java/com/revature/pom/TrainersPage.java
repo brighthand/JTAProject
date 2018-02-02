@@ -12,9 +12,20 @@ public class TrainersPage {
 static WebElement e = null;
 	
 	
-//Trainer tab on nav bar
+	public static WebElement popup(WebDriver driver) {
+	e = driver.findElement(By.xpath("/html/body/md-toast/div/span"));
+	return e;
+	}
+	
+	public static WebElement resume(WebDriver driver, String num) {
+		e = driver.findElement(By.xpath("/html/body/div/div[2]/div/md-card/md-content[1]/md-list/md-list-item["+num+"]/div/div[1]/button[1]"));
+		
+		return e;
+		}
+	
 	public static WebElement tab(WebDriver driver) {
 		e = driver.findElement(By.xpath("/html/body/div/div[1]/ng-include/div/md-content/md-nav-bar/div/nav/ul/li[5]/a"));
+<<<<<<< HEAD
 		return e;
 	}
 	
@@ -31,6 +42,31 @@ static WebElement e = null;
 	public static WebElement trainerLastName(WebDriver d) {
 		e = d.findElement(By.xpath("/html/body/div/div[2]/div/md-card[2]/md-content[1]/div/div[1]/form/md-input-container[2]/h3"));
 		return e;
+=======
+										
+		return e;
+	}
+	
+	public static WebElement tab1(WebDriver driver) {
+		e = driver.findElement(By.xpath("/html/body/div/div[1]/ng-include/div/md-content/md-nav-bar/div/nav/ul/li[5]/a"));
+										
+		return e;
+	}
+	
+	public static WebElement clickTrainer(WebDriver d) {
+		e = d.findElement(By.xpath("/html/body/div/div[2]/div/md-card/md-content[1]/md-list/md-list-item[1]/div/button"));
+		return e;
+	}
+	
+	public static WebElement trainerFirstName(WebDriver d) {
+		e = d.findElement(By.xpath("/html/body/div/div[2]/div/md-card[2]/md-content[1]/div/div[1]/form/md-input-container[1]/h3"));
+		return e;
+	}
+	
+	public static WebElement trainerLastName(WebDriver d) {
+		e = d.findElement(By.xpath("/html/body/div/div[2]/div/md-card[2]/md-content[1]/div/div[1]/form/md-input-container[2]/h3"));
+		return e;
+>>>>>>> stephen_oduor_backup
 	} 
 	
 	public static WebElement addTrainer(WebDriver d) {
@@ -41,6 +77,11 @@ static WebElement e = null;
 	
 	public static WebElement FirstName(WebDriver d) {
 		e = d.findElement(By.xpath("//*[@id=\"input_1\"]"));
+<<<<<<< HEAD
+=======
+		//*[@id="input_1"]
+		//*[@id="input_1"]
+>>>>>>> stephen_oduor_backup
 		return e;
 	}
 	//*[@id="input_61"]
@@ -62,20 +103,33 @@ static WebElement e = null;
 	}
 	
 	
+<<<<<<< HEAD
 	public static WebElement deactivate(WebDriver d) {
 		// e = d.findElement(By.xpath("/html/body/div/div[2]/div/md-card/md-content[1]/md-list/md-list-item["+row+"]/div/div[1]/button[2]"));
 		
 		e = d.findElement(By.xpath("/html/body/div/div[2]/div/md-card/md-content[1]/md-list/md-list-item[5]/div/div[1]/button[2]"));
+=======
+	public static WebElement deactivate(WebDriver d, String row) {
+		// e = d.findElement(By.xpath("/html/body/div/div[2]/div/md-card/md-content[1]/md-list/md-list-item["+row+"]/div/div[1]/button[2]"));
+		
+		e = d.findElement(By.xpath("/html/body/div/div[2]/div/md-card/md-content[1]/md-list/md-list-item["+row+"]/div/div[1]/button[2]"));
+		
+>>>>>>> stephen_oduor_backup
 		return e;
 	}
 	
-	public static WebElement deactivate1(WebDriver d) {
-		e = d.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content[1]/md-list/md-list-item[5]/div/div[1]/button[2]"));
+	public static WebElement deactivate1(WebDriver d, String row) {
+		e = d.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content[1]/md-list/md-list-item["+row+"]/div/div[1]/button[2]"));
 		return e;
 	}
 	
 	public static WebElement reactivate(WebDriver d, String row) {
 		e = d.findElement(By.xpath("/html/body/div/div[2]/div/md-card/md-content[2]/md-list/md-list-item["+row+"]/button"));
+<<<<<<< HEAD
+=======
+		
+		
+>>>>>>> stephen_oduor_backup
 		return e;
 	}
 	
@@ -108,7 +162,11 @@ static WebElement e = null;
 	}
 	
 	public static WebElement requestpto_start_year_month1(WebDriver d) {
+<<<<<<< HEAD
 		e = d.findElement(By.xpath("/html/body/div[4]/div[2]/md-calendar/div/md-calendar-year/div/md-virtual-repeat-container/div/div[2]/table/tbody[4]/tr[1]/td[5]/span"));  
+=======
+		e = d.findElement(By.xpath("/html/body/div[4]/div[2]/md-calendar/div/md-calendar-year/div/md-virtual-repeat-container/div/div[2]/table/tbody[5]/tr[1]/td[7]/span"));  
+>>>>>>> stephen_oduor_backup
 		return e;
 	}
 	
@@ -138,12 +196,20 @@ static WebElement e = null;
 	}
 	
 	public static WebElement requestpto_end_year_month1(WebDriver d) {
+<<<<<<< HEAD
 		e = d.findElement(By.xpath("/html/body/div[4]/div[2]/md-calendar/div/md-calendar-year/div/md-virtual-repeat-container/div/div[2]/table/tbody[4]/tr[1]/td[6]/span"));
+=======
+		e = d.findElement(By.xpath("/html/body/div[4]/div[2]/md-calendar/div/md-calendar-year/div/md-virtual-repeat-container/div/div[2]/table/tbody[5]/tr[2]/td[2]/span"));
+>>>>>>> stephen_oduor_backup
 		return e;
 	}
 	
 	public static WebElement requestpto_end_date1(WebDriver d) {
+<<<<<<< HEAD
 		e = d.findElement(By.xpath("/html/body/div[4]/div[2]/md-calendar/div/md-calendar-month/div/md-virtual-repeat-container/div/div[2]/table/tbody[4]/tr[3]/td[1]/span"));
+=======
+		e = d.findElement(By.xpath("/html/body/div[4]/div[2]/md-calendar/div/md-calendar-month/div/md-virtual-repeat-container/div/div[2]/table/tbody[4]/tr[3]/td[2]/span"));
+>>>>>>> stephen_oduor_backup
 		return e;
 	}
 	

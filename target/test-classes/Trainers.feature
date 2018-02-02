@@ -24,7 +24,11 @@ Feature: Trainers Page Feature
   	Then the page changes to Matt Barkley's info
   	
   
+<<<<<<< HEAD
   Scenario: VP adds a new trainer named Richard Bumer
+=======
+  Scenario: VP adds a new trainer named Richard Lewis
+>>>>>>> stephen_oduor_backup
     Given VP clicked on the Trainers tab
     When VP clicked on the add trainer button
     And  VP entered Richard first name

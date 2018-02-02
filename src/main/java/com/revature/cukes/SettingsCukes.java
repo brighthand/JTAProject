@@ -81,7 +81,11 @@ public class SettingsCukes {
 		
 		List<WebElement> componentList = selectElement.findElements(By.tagName("md-option"));
 		for (WebElement component : componentList){
+<<<<<<< HEAD
 		    if (component.getText().contains("reston 45")){ // reston 45, Cali Test 1
+=======
+		    if (component.getText().contains("ju")){ // reston 45, Cali Test 1
+>>>>>>> stephen_oduor_backup
 		        component.click();
 		        break;
 		    }
