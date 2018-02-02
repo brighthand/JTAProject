@@ -97,6 +97,7 @@ public class CurriculaPage {
 		return element;
 	}
 	
+
 	//********************* ADD NEW CURRICULUM FORM ****************************************
 	//********************* Same as edit curriculum and edit focus **************************
 	
@@ -158,3 +159,4 @@ public class CurriculaPage {
 
 	
 }
+
