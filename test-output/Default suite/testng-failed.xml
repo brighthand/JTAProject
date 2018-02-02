@@ -6,8 +6,12 @@
       <class name="com.revature.runners.BatchTestRunner">
         <methods>
           <include name="SelectLocation"/>
+          <include name="SelectTrainer"/>
           <include name="SelectRoom"/>
+          <include name="SelectCotrainer"/>
           <include name="ClickCreate"/>
+          <include name="SelectFocus"/>
+          <include name="SelectBuilding"/>
         </methods>
       </class> <!-- com.revature.runners.BatchTestRunner -->
     </classes>

@@ -1,5 +1,7 @@
 package com.revature.pom;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -66,6 +68,12 @@ public class BatchPage {
 	
 	
 	public static WebElement skills(WebDriver d) {
+		e = d.findElement(By.xpath("//*[@id=\"select_13\"]"));
+		return e;
+	}
+	
+	//Batch name text field
+	public static WebElement name(WebDriver d) {
 		e = d.findElement(By.xpath("//*[@id=\"select_13\"]"));
 		return e;
 	}
@@ -145,6 +153,17 @@ public class BatchPage {
 		return e;
 	}
 	
+	//Batch checkbox
+	public static WebElement batchCheckbox(WebDriver d, int row) {
+		e = d.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content[2]/div/md-table-container/table/tbody/tr[" + row + "]/td[" + row + "]/md-checkbox "));
+		return e;
+	}
+	
+	//Delete batches button
+	public static WebElement deleteBatchButton(WebDriver d) {
+		e = d.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content[2]/md-toolbar/button[1]"));
+		return e;
+	}
 	
 	//meta functionality
 	public static WebElement createbatch(WebDriver d) {
@@ -196,6 +215,16 @@ public class BatchPage {
 		e = d.findElement(By.xpath("//*[@id=\"lastTrainerPageButton\"]/md-icon"));
 		return e;
 	}
+	
+	
+	//*************NUMBER OF ROWS IN THE BATCHES TABLE*************************
+	public static int batchesSize(WebDriver driver) {
+		// int size = 0;
+		List<WebElement> list = driver
+				.findElements(By.xpath("//*[@id=\"view\"]/md-card/md-content[2]/div/md-table-container/table/tbody/*"));
+		return list.size();             
+	}
+
 	
 	
 	
