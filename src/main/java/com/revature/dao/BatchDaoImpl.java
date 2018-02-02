@@ -15,7 +15,7 @@ import org.hibernate.criterion.Restrictions;
 //import org.hibernate.query.Query;
 
 public class BatchDaoImpl implements BatchDao {
-	@Override
+	//@Override
 	public Batch findById(int batchid) {
 		Session session = ConnectionUtil.getSession().openSession();
 		Batch bat = null;
@@ -44,7 +44,7 @@ public class BatchDaoImpl implements BatchDao {
 	
 	
 	@SuppressWarnings("unchecked")
-	@Override
+	//@Override
 	public List<Batch> getAllBatches() {
 		Session session = ConnectionUtil.getSession().openSession();
 		List<Batch> thebatches = null;
