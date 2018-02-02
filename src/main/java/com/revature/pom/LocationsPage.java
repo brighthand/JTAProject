@@ -14,25 +14,25 @@ public class LocationsPage {
 
 	public static WebElement tab(WebDriver driver) {
 		element = driver.findElement(By.xpath("/html/body/div/div[1]/ng-include/div/md-content/md-nav-bar/div/nav/ul/li[3]/a"));
-		return element;
+		return element;                       
 	}
 
 	// ************BUTTONS**********************
 	//Buttons on the navigation pane and body
 
-	// Location Button Virginia
+	// 1st Location Button 
 	public static WebElement locationButton(WebDriver driver) {
 		element = driver
 				.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-list/md-list-item[1]/div[1]/button"));
-		return element;
+		return element;                //*[@id="view"]/md-card/md-content/md-list/md-list-item[1]/div[1]/button
 	}
 
 	// Building Button //Revature
 	public static WebElement buildingButton(WebDriver driver) {
 		element = driver.findElement(By.xpath("//*[@id=\"loc1\"]/md-list-item[1]/div/button"));
-		return element;                       //*[@id="loc335"]/md-list-item[1]/div/div[1]/md-checkbox/div[1]
+		return element;                      
 	}
-	
+	                                          
 	// Building Button //Revature
 	public static WebElement roomButton(WebDriver driver) {
 		element = driver.findElement(By.xpath("//*[@id=\"bldg116\"]/md-list-item[1]/div/button"));

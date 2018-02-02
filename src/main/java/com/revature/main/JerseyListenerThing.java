@@ -15,7 +15,7 @@ import javax.ws.rs.core.MediaType;
 import org.testng.TestNG;
 import org.testng.collections.Lists;
 
-@Path("testresults")
+@Path("Login.jsp")
 public class JerseyListenerThing {
 
 

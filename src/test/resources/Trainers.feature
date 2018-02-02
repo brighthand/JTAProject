@@ -1,51 +1,26 @@
-#Author: your.email@your.domain.com
-#Keywords Summary :
-#Feature: List of scenarios.
-#Scenario: Business rule through list of steps with arguments.
-#Given: Some precondition step
-#When: Some key actions
-#Then: To observe outcomes or validation
-#And,But: To enumerate more Given,When,Then steps
-#Scenario Outline: List of steps for data-driven as an Examples and <placeholder>
-#Examples: Container for s table
-#Background: List of steps run before each of the scenarios
-#""" (Doc Strings)
-#| (Data Tables)
-#@ (Tags/Labels):To group Scenarios
-#<> (placeholder)
-#""
-## (Comments)
-#Sample Feature Definition Template
 
 Feature: Trainers Page Feature
   
   Scenario: VP clicks on a trainer
-  	Given VP clicked on the trainer Matt Barkley
-  	Then the page changes to Matt Barkley's info
+  	Given VP clicked on the trainer Add Test
+  	Then the page changes to Add Test's info
   	
   
-  Scenario: VP adds a new trainer named Richard Lewis
+  Scenario: VP adds a new trainer named David Smith
     Given VP clicked on the Trainers tab
     When VP clicked on the add trainer button
-    And  VP entered Richard first name
-    And VP entered Bumer last name
+    And  VP entered David first name
+    And VP entered Smith last name
     And VP clicks on save
-    Then Size of inactive trainers is increased by 1
+    Then Popup message for adding new trainer 
     
-   Scenario: VP cancels a new trainer named Randy Jackson
-   	Given VP clicks on add trainer button
-   	When VP enters Randy for first name
-   	And VP enters Jackson for last name
-   	And VP clicks on cancel
-   	Then Size of inactive trainers remains the same
+   	Scenario: VP deactivates a trainer named Add Test
+   	Given VP clicks on the deactivate button for Add Test
+   	Then Popup message for deactivate
    	
-   	Scenario: VP deactivates a trainer named Matt Patinos
-   	Given VP clicks on the deactivate button for Matt Patinos
-   	Then Size of trainers decreases by 1
-   	
-   	Scenario: VP activates a trainer named Matt Patinos
-   	Given VP clicked on the activate button for inactive trainer Richard Smith
-   	Then Size of inactive trainers is decreased by 1
+   	Scenario: VP activates a trainer named Add Test
+   	Given VP clicked on the activate button for inactive trainer Add Test
+   	Then Popup message for activate
    	
    	Scenario: VP wants to cancel a paid time off request
    	Given VP clicks on the calendar button
@@ -70,7 +45,7 @@ Feature: Trainers Page Feature
    	And VP clicked on month March 2018
    	And VP clicked on 9th day
    	And VP clicked on send
-   	Then VP is directed to choose a Gmail account
+   	Then Application is cancelled
    	
    
    	

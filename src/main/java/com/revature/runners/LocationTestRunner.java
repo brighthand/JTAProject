@@ -43,12 +43,12 @@ public class LocationTestRunner {
 
 	// Adding new location
 	// GOOD
-	@Test(priority = 3, enabled = false)
+	@Test(priority = 3, enabled = true)
 	public void addLocation() {
 		int sizeAfter = 0, sizeBefore = 0;
 		try {
 		
-			LocationCukes.i_m_on_the_locations_page(driver);
+			//LocationCukes.i_m_on_the_locations_page(driver);
 			
 			Thread.sleep(2000);
 			LocationCukes.i_click_the_add_location_button(driver);
@@ -76,11 +76,11 @@ public class LocationTestRunner {
 
 	// Add new building
 	// Good
-	@Test(priority = 4, enabled = false)
+	@Test(priority = 4, enabled = true)
 	public void addBuilding() {
 		int sizeAfter = 0, sizeBefore = 0;
 		try {
-			LocationCukes.i_m_on_the_locations_page(driver);
+			//LocationCukes.i_m_on_the_locations_page(driver);
 			
 			Thread.sleep(2000);
 			LocationCukes.i_click_a_location_checkbox(driver);
@@ -114,12 +114,12 @@ public class LocationTestRunner {
 
 	// Add new room
 	// Come back
-	@Test(priority = 5, enabled = false)
+	@Test(priority = 5, enabled = true)
 	public void addRoom() {
 		int sizeAfter = 0, sizeBefore = 0;
 		try {
 
-			LocationCukes.i_m_on_the_locations_page(driver);
+			//LocationCukes.i_m_on_the_locations_page(driver);
 			
 			Thread.sleep(2000);
 			LocationCukes.i_click_a_building_checkbox(driver);
@@ -155,7 +155,7 @@ public class LocationTestRunner {
 		String locationBefore = null, locationAfter = null;
 
 		try {
-			LocationCukes.i_m_on_the_locations_page(driver);
+			//LocationCukes.i_m_on_the_locations_page(driver);
 			LocationCukes.i_click_a_location_checkbox(driver);
 			LocationCukes.i_click_the_edit_button(driver);
 
@@ -182,12 +182,12 @@ public class LocationTestRunner {
 
 	// Edit building
 	// Good
-	@Test(priority = 7, enabled = false)
+	@Test(priority = 7, enabled = true)
 	public void editBuilding() {
 		String buildingBefore = null, buildingAfter = null;
 
 		try {
-			LocationCukes.i_m_on_the_locations_page(driver);
+			//LocationCukes.i_m_on_the_locations_page(driver);
 			LocationCukes.i_click_a_building_checkbox(driver);
 			LocationCukes.i_click_the_edit_button(driver);
 
@@ -216,12 +216,12 @@ public class LocationTestRunner {
 
 	// Edit Room
 	//Good clear button
-	@Test(priority = 8, enabled = false)
+	@Test(priority = 8, enabled = true)
 	public void editRoom() {
 		String roomBefore = null, roomAfter = null;
 		try {
 
-			LocationCukes.i_m_on_the_locations_page(driver);
+			//LocationCukes.i_m_on_the_locations_page(driver);
 			LocationCukes.i_click_add_building_button(driver);
 			LocationCukes.i_click_a_room_checkbox(driver);
 

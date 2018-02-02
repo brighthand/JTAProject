@@ -3,12 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.revature.runners.TrainersTestRunner">
+      <class name="com.revature.runners.ReportsTestRunner">
         <methods>
-          <include name="VP_Creates_PTO"/>
+          <include name="expandBatchProject"/>
+          <include name="openApplication"/>
+          <include name="closeApp"/>
+          <include name="testLoginMethod"/>
           <include name="logout"/>
         </methods>
-      </class> <!-- com.revature.runners.TrainersTestRunner -->
+      </class> <!-- com.revature.runners.ReportsTestRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
